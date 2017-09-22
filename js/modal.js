@@ -36,9 +36,6 @@
                         console.log('Publications Date', response.publication_date);
                         console.log('No of Pages', response.no_of_pages);
 
-
-                        
-
                         // add the data to the modal (just an example)
                         $('.main-modal .artist-bio').html('<h3>' + response.artist_name + '</h3>' + '<label>' + response.nationality + '</label>' + '<label>' + response.date_of_birth + '</label>' + '<label>' + response.date_of_death + '</label>' + '<p class="small">' + response.bio + '</p>');
                         
