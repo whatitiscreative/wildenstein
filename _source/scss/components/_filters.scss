@@ -1,0 +1,71 @@
+// Filters
+// ------------------------------------------------------------------------------------------------
+
+.filter-drawer-controls {
+	text-align: center;
+	position: relative;
+
+	&:before,
+	&:after {
+		content: '';
+		width: calc(50% - 88px);
+		height: 1px;
+		background: $color-border;
+		position: absolute;
+		right: 0;
+		top: 50%;
+	}
+
+	&:before {
+		left: 0;
+	}
+
+	&:after {
+		right: 0;
+	}
+}
+
+.filter-drawer {
+	display: none;
+}
+
+.filter-inner {	
+	display: flex;
+	padding: 4.0rem 0 2.0rem 0;
+	border-bottom: 1px solid $color-border;
+
+	ul {
+		position: relative;
+
+		@include MQ(XS) {
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
+		}
+		
+		li {
+			margin-bottom: 3.0rem;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			line-height: 26px;
+			font-size: 1.4rem;
+		}
+
+		// &.radio-select {
+		// 	&:after {
+		// 		content: '';
+		// 		width: 1px;
+		// 		height: 70%;
+		// 		background: $color-grey-dark;
+		// 		position: absolute;
+		// 		right: -20px;
+		// 	}
+		// }
+
+		&.check-select {
+			flex-direction: row;
+			flex-grow: 10;
+			justify-content: space-around;	
+		}
+	}
+}

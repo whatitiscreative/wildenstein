@@ -1,0 +1,83 @@
+// Typography
+// ------------------------------------------------------------------------------------------------
+$font-primary: "brandon-grotesque",sans-serif;
+$font-secondary: "adobe-garamond-pro",serif;
+
+body {
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.5;
+  color: $color-grey-dark;
+  font-family: $font-primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: $font-secondary;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3.8rem;
+
+  @include MQ(S) {
+    font-size: 9.0rem;
+    letter-spacing: 0.18rem;
+    line-height: 48px;
+  }
+}
+
+h2 {
+  font-size: 6.2rem;
+  letter-spacing: 0.16rem;
+}
+
+h3 {
+  font-size: 3.2rem;
+  letter-spacing: 0.04rem;
+  line-height: 44px;
+}
+
+p {
+  font-size: 1.6rem;
+  color: $color-grey-dark;
+
+  &.small {
+    font-size: 1.3rem;
+    line-height: 23px;
+    letter-spacing: 0.025rem;
+  }
+}
+
+label {
+  &.main-label {
+    font-family: $font-secondary;
+    font-style: italic;
+  }
+}
+
+// Globals
+
+.small {
+  font-size: 1.2rem;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.white {
+  color: $color-white;
+}
+
+.black {
+  color: $color-black;
+}
+
