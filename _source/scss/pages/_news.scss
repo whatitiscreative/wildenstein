@@ -32,15 +32,6 @@
         margin-bottom: 1.0rem;
     }
 
-    span {
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: $color-border;
-        line-height: 30px;
-        margin-bottom: 1.0rem;
-        display: inline-block;
-    }
-
     p {
         margin-bottom: 1.6rem;
     }
@@ -65,4 +56,45 @@
     .row {
         margin-bottom: 4.8rem;
     }
+}
+
+.news-content {
+    padding: 8.8rem 0 7.2rem 0;
+    background: $color-white;
+
+    &.intro {
+        p {
+            &:nth-of-type(1) {
+              &:first-letter {
+                float: left;
+                font-size: 54px;
+                margin-right: 25px;
+                border: 2px solid;
+                padding: 18px 30px;
+                line-height: 1;
+                font-family: $font-secondary;
+              }
+            }
+        }    
+    }
+
+    p {
+        margin-bottom: 1.5em;
+        line-height: 29px;
+        font-size: 1.8rem;
+        display: inline-block;
+      }
+
+    h3 {
+        font-size: 3.0rem;
+        line-height: 38px;
+        letter-spacing: 0.05rem;
+        margin: 3.0rem 0;
+    }
+}
+
+.gallery-spotlight {
+    padding: 6.0rem 0;
+    height: 540px;
+    background: rgba(202, 190, 199, 0.1);
 }

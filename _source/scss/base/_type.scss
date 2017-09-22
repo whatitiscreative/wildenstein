@@ -87,3 +87,13 @@ label {
   color: $color-black;
 }
 
+// Date Styles
+
+.date {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: $color-border;
+  line-height: 30px;
+  margin-bottom: 1.0rem;
+  display: inline-block;
+}

@@ -56,5 +56,16 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
     //height: 500px;
+}
+
+.down-arrow {
+  content: '';
+  background: url('../../images/down-arrow.svg');
+  height: 33px;
+  width: 33px;
+  background-size: 33px;
+  position: absolute;
+  bottom: 5vh;
 }
