@@ -1,0 +1,68 @@
+// News Specific Styles
+// ------------------------------------------------------------------------------------------------
+
+.news-index {
+    padding-top: 4.8rem;
+    border-top: 1px solid $color-border;
+
+    .news-info {
+        padding: 3.4rem 0 0;
+
+        @include MQ(S) {
+            padding: 0 0 0 3.4rem;
+        }
+    }
+
+    .fill {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        height: 200px;
+        
+        img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden        
+        }
+    }
+
+    h4 {
+        margin-bottom: 1.0rem;
+    }
+
+    span {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: $color-border;
+        line-height: 30px;
+        margin-bottom: 1.0rem;
+        display: inline-block;
+    }
+
+    p {
+        margin-bottom: 1.6rem;
+    }
+
+    .read-more {
+        color: $color-blue-light;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .bg-image {
+        height: 300px;
+
+        @include MQ(S) {
+            height: 200px;
+            
+        }
+    }
+
+    .row {
+        margin-bottom: 4.8rem;
+    }
+}

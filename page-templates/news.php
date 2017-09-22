@@ -11,15 +11,19 @@ get_header(); ?>
     <main>
         <div class="container">
             <header>
-                <h2>News</h2>
-                <p>Lorem ipsum dolor sit amet, ei erant nemore vulputate vim. Singulis definiebas disputationi usu ei, hinc iusto electram ne duo. Id vel tollit legimus nostrum, at vivendo atomorum consequat vis. </p>
+                <h2><?php the_title();?></h2>
             </header>
 
-            <section class="masonry-layout">
-                <?php echo do_shortcode('[ajax_load_more post_type="news" order="ASC" pause="false" scroll="true" posts_per_page="12" transition="masonry" masonry_selector=".grid-item" masonry_animation="slide-up" ]'); ?>
+            <section class="news-layout">
+                <div class="row center-xs">
+                    <div class="col-xs-12 col-sm-10">
+                        <div class="news-index">
+                            <?php echo do_shortcode('[ajax_load_more repeater="template_1" post_type="news" order="DSC" pause="false" scroll="true" posts_per_page="12"]'); ?>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
-
     </main>
 
 
