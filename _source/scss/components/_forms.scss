@@ -1,0 +1,189 @@
+// Forms
+// ------------------------------------------------------------------------------------------------
+
+
+// custom inputs
+// custom checkbox/radios
+$fw-input-padding:            6px                      !default;
+$fw-check-height:             16px                     !default;
+$fw-check-width:              $fw-check-height         !default;
+$fw-check-scale:              6px                      !default; // optimized for even numbers
+$fw-check-input-bg-color:     #fff                     !default;
+$fw-check-border-width:       1px                      !default;
+$fw-check-border-radius:      null                     !default;
+$fw-check-border-color:       $color-grey-dark           !default;
+
+// visually hide elements the accessible way
+@mixin hide_input_el {
+	border: 0                      !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	clip-path: inset(50%)          !important;
+	height: 1px                    !important;
+	overflow: hidden               !important;
+	padding: 0                     !important;
+	position: absolute             !important;
+	width: 1px                     !important;
+	white-space: nowrap            !important;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  @include hide_input_el();
+
+  &:active {
+    + label {
+      &::before {
+        transition-duration: 0;
+      }
+    }
+  }
+
+  + label {
+    position: relative;
+    user-select: none;
+
+    &::before {
+      border: $fw-check-border-width solid $fw-check-border-color;
+      box-sizing: content-box;
+      content: '';
+      color: $fw-check-border-color;
+      margin-right: 10px;
+      top: 0;
+      left: 0;
+      width: $fw-check-width;
+      height: $fw-check-height;
+      display: inline-block;
+      position: relative;
+      top: 3px;
+    }
+
+    &::after {
+      box-sizing: content-box;
+      content: '';
+      background-color: $fw-check-border-color;
+      position: absolute;
+	    top: 4px;
+	    left: 1px;
+	    width: 16px;
+      height: 16px;
+      transform: scale(0);
+      transform-origin: 50%;
+      transition: transform 200ms ease-out;
+    }
+  }
+
+  &[disabled] {
+
+    + label {
+
+      &::before {
+        animation: none;
+        box-shadow: none;
+        border: 1px solid rgba(128, 128, 128, 0.5);
+      }
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+
+      + label {
+
+        &::before {
+          border-color: rgba(128, 128, 128, 0.5);
+          filter: none;
+          transition: none;
+        }
+      }
+    }
+  }
+}
+
+[type="checkbox"] {
+
+  + label {
+
+    &::before,
+    &::after {
+      @if ($fw-check-border-radius) {
+        border-radius: $fw-check-border-radius;
+      }
+      @else {
+        border-radius: 0;
+      }
+	}
+	
+    &::after {
+	  top: 8px;
+	  left: 5px;
+	  width: 6px;
+	  height: 3px;
+	  margin-top: 0;
+	  border-style: solid;
+	  border-color: $color-white;
+	  border-width: 0 0 2px 2px;
+	  border-radius: 0;
+      border-image: none;
+      transform: rotate(-45deg) scale(0);
+      transition: none;
+    }
+  }
+
+  &:checked {
+    + label {
+		&::before {
+			background-color: $color-blue-dark;
+		}
+	
+      &::after {
+        content: ''; //\2713';
+        transform: rotate(-45deg) scale(1.15);
+        transition: transform 200ms ease-out;
+      }
+    }
+  }
+}
+
+[type="radio"] {
+  + label {
+    &::before,
+    &::after {
+      @if ($fw-check-border-radius) {
+        border-radius: $fw-check-border-radius;
+      }
+      @else {
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &:checked {
+
+    &:active,
+    &:focus {
+      + label {
+        &::before {
+          animation: none;
+          filter: none;
+          transition: none;
+        }
+      }
+    }
+
+    + label {
+      &::before {
+        animation: none;
+      }
+
+      &::after {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+label {
+	cursor: pointer;
+  	display: inline-block;
+}
+

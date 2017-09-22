@@ -1,0 +1,158 @@
+// Masonry Layout
+// ------------------------------------------------------------------------------------------------
+
+// .grid-item {
+//     min-height: 400px;
+//     width: 100%;
+// }
+
+.masonry-layout {
+    margin-top: 6.0rem;
+    position: relative;
+
+    @include MQ(S) {
+        min-height: 700px;        
+    }
+}
+
+.alm-listing {
+    display: flex;
+}
+
+.grid-item{
+    width: 31.5%;
+    margin-right: 20px;
+    float: left;
+    position: relative;
+
+    &:after {
+        content: 'READ \A MORE';
+        //border-radius:120px;
+        //font-weight: bold;
+        height: 80px;
+        width: 80px;
+        background: $color-white;
+        position: absolute;
+        top: calc(50% - 102px);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 1.0rem;
+        white-space: pre;
+        
+        opacity: 0;
+        @include global-transition;        
+    }
+
+    &:hover {
+        &:after {
+            opacity: 1;
+            @include global-transition;
+        }
+    }
+
+    &:nth-child(3n+3) {
+        margin-right: 0;
+    }
+
+    a {
+        display: block;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        flex-shrink: 0;
+        max-width: 350px;
+        min-height: 100%;
+    }
+
+    .artist-info {
+        padding: 1.6rem 0 3.2rem 0;
+
+        p {
+            font-size: 2.4rem;
+            line-height: 30px;
+            letter-spacing: 0.04rem;
+        }
+
+        label {
+            font-size: 1.3rem;
+            line-height: 1.9rem;
+            letter-spacing: 0.05rem;
+            font-family: $font-secondary;
+            color: $color-grey;
+        }
+    }
+
+    .notable-works {
+        padding: 1.6rem 0 3.2rem 0;
+
+        p {
+            font-size: 1.3rem;
+            //line-height: 30px;
+            letter-spacing: 0.04rem;
+            color:$color-grey-dark;
+        }
+
+        label {
+            font-size: 1.3rem;
+            //line-height: 1.9rem;
+            letter-spacing: 0.05rem;
+            font-family: $font-secondary;
+            color: $color-grey;
+        }
+        
+    }
+ }
+
+//  #custom-alm-loader{
+//     opacity: 0;
+//     display: none;
+//     width: 100%;
+//     padding: 50px;
+//     margin: 0 0 20px;
+//     background: #fff;
+//     border: 2px dashed #ccc;
+//     background: url("img/ajax-loader.gif") no-repeat center center;
+//     transition: all 0.1s ease;
+//  }
+ 
+// .alm-loading #custom-alm-loader{
+//     display: block;
+//     opacity: 1;
+// }
+ 
+
+//  .alm-ajax {
+// 	display: -ms-flexbox;
+// 	-ms-flex-direction: column;
+// 	-ms-flex-wrap: wrap;
+// 	display: flex;
+// 	flex-direction: column;
+// 	flex-wrap: wrap;
+// 	height: 100vw;
+//     font-size: 0; 
+    
+//     .grid-item {
+//         width: 33.3%;
+//         transition: .8s opacity;
+        
+//         img {
+//             flex-shrink: 0;
+//             min-width: 100%;
+//             min-height: 100%
+//         }
+//     }
+// }

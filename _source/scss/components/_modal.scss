@@ -1,0 +1,31 @@
+// Modal Style
+
+.main-modal {
+    position: fixed;
+    background: $color-white;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: scroll;
+    display: none;
+    z-index: 10;
+    @include global-transition;
+
+    // &.active {
+    //     opacity: 1;
+    //     z-index: 10;   
+    //     @include global-transition;
+    // }
+
+    @include MQ(S) {
+        overflow: hidden;
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+}
+

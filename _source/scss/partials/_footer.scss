@@ -1,0 +1,24 @@
+// Footer
+// ------------------------------------------------------------------------------------------------
+
+footer {
+    height: 300px;
+    
+    .footer-block {
+        background: $color-black;
+
+        &:nth-child(2) {
+            background: $color-grey-dark;            
+        }
+    }
+
+
+    @include MQ(XS) {
+        display: flex;
+        height: 520px;        
+        
+        .footer-block {
+            flex: 1;
+        }
+    }
+}
