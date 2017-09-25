@@ -20,35 +20,37 @@ get_header(); ?>
 						<span class="down-arrow"></span>
 					</div>
 
-					<section class="news-content intro">
-						<div class="container">
-							<div class="row center-xs">
-								<div class="col-xs-12 col-sm-8">
-									<p>Lorem ipsum dolor sit amet, no duo natum magna mandamus, putent omittam per te. Habeo expetenda qui ei. Ne vis integre admodum salutatus. Ex omnes recteque vix, sea graeci facilisi in. Et ius homero reprehendunt.</p>
-									<br>
-									<h3>Nulla Complectitur Quo No</h3>
-									<p>His singulis mnesarchum no. Nulla complectitur quo no, autem repudiare sea cu. Fugit vocent molestie ad has, odio augue ad vix. No quas accumsan tacimates vim. Lucilius accusata in nam, reque aliquid et sea, doming inimicus pri ne.</p>
-								</div>
-							</div>
-						</div>
-					</section>
+					<?php if(have_rows('article_content')):?>
+						<?php while(have_rows('article_content')): the_row(); ?>
+							<?php if (get_row_layout() == 'text_block'):?>
+								<section class="news-content">
+									<div class="container">
+										<div class="row center-xs">
+											<div class="col-xs-12 col-sm-8">
+												<?php the_sub_field('wysiwyg_editor');?>
+											</div>
+										</div>
+									</div>
+								</section>
+							<?php endif;?>
 
-					<section class="gallery-spotlight">
-						<div class="news-slider">
+							<?php if (get_row_layout() == 'gallery_block'):?>
+								<section class="gallery-spotlight">
+									<?php if(have_rows('gallery')): ?>
+										<div class="news-slider">
+											<?php while(have_rows('gallery')): the_row();?>
+												<div>
+													<img src="<?php the_sub_field('image');?>">
+													<label><?php the_sub_field('caption');?></label>
+												</div>
+											<?php endwhile; ?>
+										</div>
+									<?php endif; ?>
+								</section>
+							<?php endif;?>
 
-						</div>
-					</section>
-
-					<section class="news-content">
-						<div class="container">
-							<div class="row center-xs">
-								<div class="col-xs-12 col-sm-8">
-									<h3>Denique Repudiandae</h3>
-									<p>His singulis mnesarchum no. Nulla complectitur quo no, autem repudiare sea cu. Fugit vocent molestie ad has, odio augue ad vix. No quas accumsan tacimates vim. Lucilius accusata in nam, reque aliquid et sea, doming inimicus pri ne.</p>
-								</div>
-							</div>
-						</div>
-					</section>
+						<?php endwhile;?>
+					<?php endif;?>
 				</main>
 			<?php endwhile;
 			?>

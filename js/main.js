@@ -18,11 +18,27 @@
                 })
             });
     
-            // $(document).ready(function() {
-            //     $('.gallery-slider').slick({
-            //         dots: true
-            //     });
-            // });
+            $(document).ready(function() {
+                $('.news-slider').slick({
+                    variableWidth: true,
+                    infinite: false,
+                    slidesToShow: 1,
+                    responsive: [
+                        {
+                          breakpoint: 991,
+                          settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            variableWidth: false,
+                            centerMode: true,
+                            adaptiveHeight: true
+                          }
+                        }
+                    ]
+                    
+                });
+            });
     
             $(document).ready(function() {
                 $( ".nav-items" ).append( $('.logo') );            
@@ -111,6 +127,7 @@
                 $('.nav-items').removeClass('shrink');
             }
         });
+  
     
         //    $( document ).ready(function() {
         //         $('.masonry-layout').masonry({
