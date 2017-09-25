@@ -42,6 +42,22 @@
         letter-spacing: 1px;
         font-weight: 600;
         text-transform: uppercase;
+
+        &:hover {
+            color: $color-black;
+
+            .chevron-arrow-right {
+                display: inline-block;
+                border: 2px solid $color-black;
+              
+                &:after {
+                  content: '';
+                  display: inline-block;    
+                  border-right: 2px solid $color-black;
+                  border-bottom: 2px solid $color-black;
+                }
+              }              
+        }
     }
 
     .bg-image {

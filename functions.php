@@ -668,7 +668,7 @@ add_action('init', 'publications_post_type', 0);
 			'label'               => __( 'news', 'text_domain' ),
 			'description'         => __( 'Post Type Description', 'text_domain' ),
 			'labels'              => $labels,
-			'supports'            => array( 'title', 'thumbnail', 'revisions'),
+			'supports'            => array( 'title', 'thumbnail', 'revisions', 'excerpt'),
 			'taxonomies'          => array( 'post_tag' ),
 			'hierarchical'        => false,
 			'public'              => true,

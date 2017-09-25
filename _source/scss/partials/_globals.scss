@@ -60,6 +60,8 @@
     //height: 500px;
 }
 
+// Arrows
+
 .down-arrow {
   content: '';
   background: url('../../images/down-arrow.svg');
@@ -68,4 +70,26 @@
   background-size: 33px;
   position: absolute;
   bottom: 5vh;
+}
+
+.chevron-arrow-right {
+  display: inline-block;
+  border: 2px solid $color-blue-light;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  margin-right: 1.0rem;
+
+  &:after {
+    content: '';
+    display: inline-block;    
+    border-right: 2px solid $color-blue-light;
+    border-bottom: 2px solid $color-blue-light;
+    width: 4px;
+    height: 4px;  
+    transform: rotate(-45deg);    
+    position: relative;
+    bottom: 1px;
+    left: 4px;
+  }
 }
