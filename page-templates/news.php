@@ -18,7 +18,7 @@ get_header(); ?>
                 <div class="row center-xs">
                     <div class="col-xs-12 col-sm-10">
                         <div class="news-index">
-                            <?php echo do_shortcode('[ajax_load_more repeater="template_1" post_type="news" order="DSC" pause="false" scroll="true" posts_per_page="12"]'); ?>
+                            <?php echo do_shortcode('[ajax_load_more repeater="template_1" post_type="news" order="DSC" pause="false" scroll="true" posts_per_page="8"]'); ?>
                         </div>
                     </div>
                 </div>
