@@ -753,49 +753,69 @@ function get_post_ajax() {
 	$id = $_POST['id'];
 
 	// get the post data
-	$post = get_post($id);
+	$post = get_post($id, 'ARRAY_A');
+
 
 	// if it was successful, then let's get data
 	if(!is_wp_error($post)) {
-		$result = [
-			'type' 			=> 'success',
-			'post'			=> $post,
 
-			// use the id to get the ACF data
-			// add the rest of the ACF content here
-			'artist_name'				=> get_field('artist_name', $id),	
-			'nationality' 				=> get_field('nationality', $id),
-			'date_of_birth' 			=> get_field('date_of_birth', $id),
-			'date_of_death' 			=> get_field('date_of_death', $id),
-			'bio'						=> get_field('bio', $id),
-			
-			// Notable Works ACF data
-			'page_title'				=> get_field('page_title', $id),
-			'artist_overview_text'		=> get_field('artist_overview_text', $id),
-			'image' 					=> get_field('image', $id),
-			'title' 					=> get_field('title', $id),
-			'supporting_details' 		=> get_field('supporting_details', $id),
+		if($post['post_type'] == 'notableworks') {
+			$result = [
+				'type' 			=> 'success',
+				'post'			=> $post,
 
-			//Publications ACF data
-			'page_title'					=> get_field('page_title', $id),
-			'publications_overview_text'	=> get_field('publications_overview_text', $id),
-			'publication_date'				=> get_field('publication_date', $id),
-			'publication_title'				=> get_field('publication_title', $id),
-			'publication_subtitle'			=> get_field('publication_subtitle', $id),
-			'publication_brief'				=> get_field('publication_brief', $id),
-			'no_of_pages'					=> get_field('no_of_pages', $id),
-		];
+				// Notable Works ACF data
+				'page_title'				=> get_field('page_title', $id),
+				'artist_overview_text'		=> get_field('artist_overview_text', $id),
+				'image' 					=> get_field('image', $id),
+				'artist_name'				=> get_field('artist_name', $id),	
+				'title' 					=> get_field('title', $id),
+				'supporting_details' 		=> get_field('supporting_details', $id),
+			];
+		}
 
-		$i = 0;
-		if(have_rows('artist_gallery', $id)) {
-			while(have_rows('artist_gallery', $id)) {  
-				the_row();  
-				$result['artist_gallery'][$i] = [
-					'image' => get_sub_field('image'),
-					'title' => get_sub_field('title'),
-				];
-				$i++;
+		if($post['post_type'] == 'artists') {
+			$result = [
+				'type' 			=> 'success',
+				'post'			=> $post,
+
+				// use the id to get the ACF data
+				// add the rest of the ACF content here
+				'artist_name'				=> get_field('artist_name', $id),	
+				'nationality' 				=> get_field('nationality', $id),
+				'date_of_birth' 			=> get_field('date_of_birth', $id),
+				'date_of_death' 			=> get_field('date_of_death', $id),
+				'bio'						=> get_field('bio', $id),
+			];
+
+			$i = 0;
+			if(have_rows('artist_gallery', $id)) {
+				while(have_rows('artist_gallery', $id)) {  
+					the_row();  
+					$result['artist_gallery'][$i] = [
+						'image' => get_sub_field('image'),
+						'title' => get_sub_field('title'),
+					];
+					$i++;
+				}
 			}
+		}
+
+		if($post['post_type'] == 'publications') {
+			$result = [
+				'type' 			=> 'success',
+				'post'			=> $post,
+
+				//Publications ACF data
+				'page_title'					=> get_field('page_title', $id),
+				'publications_overview_text'	=> get_field('publications_overview_text', $id),
+				'publication_image'				=> get_field('publication_image',$id),
+				'publication_date'				=> get_field('publication_date', $id),
+				'publication_title'				=> get_field('publication_title', $id),
+				'publication_subtitle'			=> get_field('publication_subtitle', $id),
+				'publication_brief'				=> get_field('publication_brief', $id),
+				'no_of_pages'					=> get_field('no_of_pages', $id),
+			];
 		}
 
 	} else {

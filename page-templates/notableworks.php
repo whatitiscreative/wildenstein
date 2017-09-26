@@ -16,22 +16,27 @@ get_header(); ?>
             </header>
 
             <section class="masonry-layout">
-                <?php echo do_shortcode('[ajax_load_more repeater="template_1" post_type="notableworks" order="ASC" pause="false" scroll="true" posts_per_page="12" transition="masonry" masonry_selector=".grid-item" masonry_animation="slide-up" ]'); ?>
+                <?php echo do_shortcode('[ajax_load_more repeater="template_1" post_type="notableworks" order="ASC" pause="false" scroll="true" posts_per_page="6" transition="masonry" masonry_selector=".grid-item" masonry_animation="slide-up" ]'); ?>
             </section>
         </div>
 
         <!-- Modal -->
 
         <div class="main-modal notable-works">
-            <div class="container">
-                <div class="row center-xs">
-                    <div class="col-xs-6">
+             
+                <!-- <div class="row center-xs"> --> -->
+                    <!-- <div class="col-xs-6"> -->
                         <div class="notable-works-content">
+                            <div class="nw-modal-img-wrapper">
+                            
+                            </div>
+                            <div class="layout">
 
+                            </div> 
                         </div>
-                    </div>
-                </div>
-            </div>
+                    <!-- </div>
+                </div>-->
+            
 
             <div class="modal-close">CLOSE</div>
         </div>
