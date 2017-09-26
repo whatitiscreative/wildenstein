@@ -48,6 +48,33 @@
         @include global-transition;        
     }
 
+    &.notable-works {
+        &:after {
+        content: 'DETAILS';
+        border-radius:120px;
+        //font-weight: bold;
+        height: 80px;
+        width: 80px;
+        background: $color-white;
+        position: absolute;
+        top: calc(50% - 102px);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 1.0rem;
+        white-space: pre;
+        
+        opacity: 0;
+        @include global-transition;        
+    }
+}
+    
+
+    
     &:hover {
         &:after {
             opacity: 1;
@@ -97,6 +124,26 @@
     }
 
     .notable-works {
+        padding: 1.6rem 0 3.2rem 0;
+
+        p {
+            font-size: 1.3rem;
+            //line-height: 30px;
+            letter-spacing: 0.04rem;
+            color:$color-grey-dark;
+        }
+
+        label {
+            font-size: 1.3rem;
+            //line-height: 1.9rem;
+            letter-spacing: 0.05rem;
+            font-family: $font-secondary;
+            color: $color-grey;
+        }
+        
+    }
+
+    .publications {
         padding: 1.6rem 0 3.2rem 0;
 
         p {

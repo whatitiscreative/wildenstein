@@ -14,25 +14,41 @@ get_header(); ?>
                 <h2><?php the_field('page_title'); ?></h2>
                 <p><?php the_field('publications_overview_text');?> </p>
             </header>
-
-            <section class="masonry-layout">
-                <?php echo do_shortcode('[ajax_load_more post_type="publications" order="ASC" pause="false" scroll="true" posts_per_page="12" transition="masonry" masonry_selector=".grid-item" masonry_animation="slide-up" ]'); ?>
-            </section>
+           
+            <!-- <div class="row"> -->
+                <!-- <div class=> -->
+                    <section class="masonry-layout">
+                        <?php echo do_shortcode('[ajax_load_more repeater="template_2" post_type="publications" order="ASC" pause="false" scroll="true" posts_per_page="12" transition="masonry" masonry_selector=".grid-item" masonry_animation="slide-up" ]'); ?>
+                    </section>
+                <!-- </div> -->
+            <!-- </div> -->
         </div>
 
         <!-- Modal -->
 
-        <div class="main-modal publications">
+        <div class="main-modal">
             <div class="container">
-                <div class="col-xs-12 col-sm-5">
-                    <div class="publications-content">
-                         
+                <section class="publications">
+                    <div class="row around-xs">
+                        <div class="col-xs-12 col-sm-5">
+                            <div class="publications-content">
+                                    
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-5">
+                            <div class="publications-image">
+
+                            </div>
+                        </div>
+
+                        
+
                     </div>
-                </div>
+                </section>
             </div>
+
             <div class="modal-close">CLOSE</div>
         </div>
-
     </main>
 
 
