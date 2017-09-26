@@ -42,7 +42,8 @@ footer {
 
 
         &:nth-child(2) {
-            background: $color-grey-dark;            
+            background-repeat: no-repeat;
+            background-size: cover;
         }
     }
 
