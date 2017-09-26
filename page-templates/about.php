@@ -9,8 +9,8 @@
 
 get_header(); ?>
 	<main>
-		<div class="hero with-overlay bg-image" style="background-image: url(<?php the_field('cover_image'); ?>)">
-			<h2 class="white">About Us</h2>
+		<div class="hero with-overlay bg-image with-icon" style="background-image: url('http://localhost:5132/wp-content/uploads/2017/09/bg.png')">
+			<h1 class="white">About Us</h1>
 			<span class="down-arrow"></span>
 		</div>
 		<?php if(have_rows('content_blocks')):?>

@@ -4,7 +4,10 @@
 .news-index {
     padding-top: 4.8rem;
     border-top: 1px solid $color-border;
+}
 
+.news-index, 
+.latest-news {
     .news-info {
         padding: 3.4rem 0 0;
 
@@ -71,6 +74,14 @@
 
     .row {
         margin-bottom: 4.8rem;
+    }
+
+    aside {
+        padding-right: 50px;
+
+        p {
+            margin-bottom: 3.0rem;
+        }
     }
 }
 
