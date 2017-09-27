@@ -3,7 +3,12 @@
 
 .publications {
     .publications-content{
-        padding: 6.0rem 20% 0 0;
+       // padding: 6.0rem 20% 0 0;
+        margin-top:10rem;
+        padding-top: 15rem;
+        padding-left: 10rem;
+        padding-right: 20%;
+        //padding-bottom: 15rem;
 
         h3 {
             margin-bottom: 1.0rem;
@@ -12,30 +17,55 @@
     
         label {
             font-family: $font-secondary;
-            //border-bottom: 1px solid $color-border;
-            //padding-bottom: 3.6rem;
-            //margin-bottom: 3.6rem;
-        }    
-    }
-}
+            color: $color-grey;
+            margin-bottom: 3.6rem;
+        }   
+        .pub-border{
+            border-bottom: 1px solid $color-border;
+            padding-bottom: 3.6rem;
+            color: $color-grey;
+        } 
+        .date{
+            font-style: italic;
+        }
+        .pub-font{
 
-.publications-image{
-    .bg-image {
-        background-size: contain;
-        max-width: 100%;
-        height: 450px;
-        margin-bottom: 3.0rem;
+            font-family: Avenir Next; 
+        }
+        p{
+
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+        }
+    }
+    .publications-modal-img-wrapper {
+        height: calc(100vh - 220px);
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 12rem;
+        margin-left: 12rem;
+    }
     
+    .publications-modal-img {
+        height: 100%;
+        width: auto;
+        margin-top: 5rem;
     }
+    .modal-close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+    // .publications-modal-wrapper {
+    //     height: calc(100vh - 200px);
+    //     margin: 0 auto;
+    //    // text-align: center;
+    //     margin-top: 5rem;
+    //     //margin-left: 5rem;
+
+    
+    // }
+    
 }
 
-.publications-modal-img-wrapper {
-    height: calc(100vh - 200px);
-    margin: 0 auto;
-    text-align: center;
-}
 
-.publications-modal-img {
-	height: 100%;
-	width: auto;
-}

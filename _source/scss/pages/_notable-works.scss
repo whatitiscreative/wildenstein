@@ -1,5 +1,11 @@
 // Notable Works Specific Styles
 // ------------------------------------------------------------------------------------------------
+// .display{
+//     label{
+//         text-align: left;
+
+//     }
+
 
 .notable-works-content {
    padding: 3.0rem 3rem 0 0;
@@ -19,11 +25,13 @@
         padding-bottom: 3.6rem;
         margin-bottom: 3.6rem;
         padding-top:2rem;
+        
     }    
     .layout{    
         text-align: left;
     }    
 }
+//}
 
 .nw-modal-img-wrapper {
     height: calc(100vh - 200px);

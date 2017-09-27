@@ -26,25 +26,21 @@ get_header(); ?>
 
         <!-- Modal -->
 
-        <div class="main-modal">
+        <div class="main-modal publications">
             <div class="container">
-                <section class="publications">
                     <div class="row around-xs">
-                        <div class="col-xs-12 col-sm-5">
+                        <div class="col-xs-12 col-sm-6">
                             <div class="publications-content">
                                     
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-5">
-                            <div class="publications-image">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="publications-modal-img-wrapper">
 
                             </div>
                         </div>
-
-                        
-
                     </div>
-                </section>
+                
             </div>
 
             <div class="modal-close">CLOSE</div>

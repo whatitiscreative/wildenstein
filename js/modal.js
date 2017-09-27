@@ -52,7 +52,32 @@
                         }
                     
                         if(response.post.post_type == 'publications') {
-                        $('.main-modal .publications .publications-content').html('<div class="publications-modal-img-wrapper"><img src="" class="publications-modal-img" style="background-image: url('+ response.publication_image +')"></div>' + '<h3>' + response.publication_title + '</h3>'+ '<label class="main-label">' + response.publication_subtitle + '</label>' + ', ' + '<label>'  + response.publication_brief + '</label>'+', '+'<label>'  + response.publication_date + '</label>'+ '<label>' + response.no_of_pages +'</label>');
+
+                            var output ='';
+                           // output = '<div class="main-modal publications">';
+                           //     output += '<div class="container">';
+                                    output = '<div class="row around-xs">';
+                                        output += '<div class="col-xs-12 col-sm-6">';
+                                            output += '<div class="publications-modal-img-wrapper">';
+                                                output += '<img class="publications-modal-img" src="'+response.publication_image+'">';
+                                            output += '</div>';
+                                        output += '</div>';
+
+                                        output += '<div class="col-xs-12 col-sm-6">';
+                                            output += '<div class="publications-content">';
+                                                output += '<label>'+ response.publication_date +'</label>';
+                                                output += ' <h3>'+response.publication_title +'</h3>';
+                                                output += '<h4 class="pub-border">'+response.publication_subtitle+'</h4>';
+                                                output += '<p class="pub-font">'+ response.publication_brief+'</p>';
+                                                output += '<p class="pub-font"> '+'Published '+' '+ response.publication_date +''+', '+' '+response.no_of_pages+' '+' pages'+' </p>';
+                                            output += '</div>';
+                                        output += '</div>';
+                                    output += '</div>';
+                              //  output += '</div>';
+                             //   output += '<div class="modal-close">CLOSE</div>';
+                          //  output += '</div>';
+                        $('.main-modal.publications').html(output);
+                        
                         }
 
                     } else if(response.type == 'error') {
