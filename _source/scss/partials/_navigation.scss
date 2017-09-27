@@ -131,7 +131,7 @@
     display: block;
     background: #8E8F9B;
     width: 30px;
-    height: 3px;
+    height: 2px;
     position: absolute;
     left: 0;
     @include global-transition;
@@ -151,17 +151,19 @@
   }
 
   &.active {
-    &.line-1 {
-      transform: translateX(0) rotate(45deg);
-    }
-
-    &.line-2 {
-      opacity: 0;
-      
-    }
-
-    &.line-3 {
-      transform: translateX(0) rotate(-45deg);
+    .line {
+      &.line-1 {
+        transform: translateY(8px) translateX(0) rotate(45deg);
+      }
+  
+      &.line-2 {
+        opacity: 0;
+        
+      }
+  
+      &.line-3 {
+        transform: translateY(-9px) translateX(0) rotate(-45deg);
+      }  
     }
   }
 
