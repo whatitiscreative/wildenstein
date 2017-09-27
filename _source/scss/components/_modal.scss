@@ -29,3 +29,48 @@
     }
 }
 
+// Contact Modal
+
+.contact-modal {
+    height: 100vh;
+    position: fixed;
+    background: $color-black;
+    width: 100vw;
+    top: 0;
+    right: 0;
+    z-index: 20;
+    transform: translateX(100%);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include global-transition;
+
+    @include MQ(S) {
+        width: 50vw;
+    }
+
+    &.active {
+        transform: translateX(0);
+        opacity: 1;
+        @include global-transition;        
+    }
+
+    label {
+        margin: 6rem 0 2rem 0;
+        font-size: 1.5rem;
+        // color: rgba(255,255,255,0.4);
+        color: $color-border;
+        text-transform: uppercase;
+    }
+
+    .contact-info {
+        padding-left: 100px;
+    
+        h3 {
+            color: $color-white;
+            line-height: 46px;
+            font-size: 30px;        
+        }
+    }
+}

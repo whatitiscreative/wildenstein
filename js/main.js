@@ -39,6 +39,17 @@
                     
                 });
             });
+
+            $(document).ready(function() {
+                $('.trigger-contact-modal').on('click', function(){
+                    $('.contact-modal').addClass('active');
+                })
+
+                $('.close').on('click', function(){
+                    $('.contact-modal').removeClass('active');
+                })
+            });
+    
     
             $(document).ready(function() {
                 $( ".nav-items" ).append( $('.logo') );            
@@ -127,7 +138,6 @@
                 $('.nav-items').removeClass('shrink');
             }
         });
-  
     
         //    $( document ).ready(function() {
         //         $('.masonry-layout').masonry({

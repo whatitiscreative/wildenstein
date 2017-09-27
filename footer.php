@@ -15,7 +15,7 @@
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="footer-block">
 				<div class="contact-info">
-				<div class="logo-icon bg-image"></div>
+					<div class="logo-icon bg-image"></div>
 					<p><?php the_field('street', 'option'); ?></p>
 					<p><?php the_field('city', 'option'); ?><?php the_field('state', 'option'); ?><?php the_field('zip', 'option'); ?></p>
 					<p><?php the_field('phone', 'option'); ?></p>
@@ -35,6 +35,8 @@
 			</div>
 		</footer><!-- #colophon -->
 	</div><!-- #page -->
+
+	<?php get_template_part('partials/content', 'contact-modal'); ?>
 
 	<?php wp_footer(); ?>
 </body>
