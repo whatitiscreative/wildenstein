@@ -12,13 +12,13 @@ get_header(); ?>
 		<div class="hero split-screen">
 			<div class="hero-block">
 				<div class="inner">
-					<h3 class="white">A Legacy of Prestigious Artworks</h3>
-					<p class="white">Lorem ipsum dolor sit amet, ei erant nemore vulputate vim. Singulis definiebas disputationi usu ei, hinc iusto electram ne duo. Id vel tollit legimus nostrum, at vivendo atomorum consequat vis.</p>
-					<a class="btn rounded light">Notable Works</a>
+					<h3 class="white"><?php the_field('hero_headline');?></h3>
+					<p class="white"><?php the_field('intro_text');?></p>
+					<a class="btn rounded light" href="<?php echo get_field('hero_cta')['url'];?>"><?php echo get_field('hero_cta')['title'];?></a>
 				</div>
 			</div>
 
-			<div class="hero-block" style="background-image: url('http://localhost:5132/wp-content/uploads/2017/09/painting-1.png')">
+			<div class="hero-block" style="background-image: url(<?php the_field('hero_image'); ?>)">
 
 			</div>
 		</div>
@@ -29,22 +29,22 @@ get_header(); ?>
 					<div class="row center-xs">
 						<div class="col-xs-12 col-sm-3">
 							<aside>
-								<h4>A Legacy of Prestigious Artworks</h4>
-								<a class="btn rounded dark">View All Artists</a>
+								<h4><?php the_field('artist_section_headline');?></h4>
+								<a class="btn rounded dark" href="<?php echo get_field('section_cta')['url'];?>"><?php echo get_field('section_cta')['title'];?></a>
 							</aside>
 						</div>
 
 						<div class="col-xs-12 col-sm-5 col-sm-offset-1">
-							<p>Lorem ipsum dolor sit amet, no duo natum magna mandamus, putent omittam per te. Habeo expetenda qui ei. Ne vis integre admodum salutatus. Ex omnes recteque vix, sea graeci facilisi in. Et ius homero reprehendunt. Graeco equidem eligendi et eos.</p>
+							<p><?php the_field('artist_section_copy');?></p>
 						</div>
 					</div>
 				</div>
 			</section>
 		</div>
 
-		<div class="hero with-overlay bg-image with-icon" style="background-image: url('http://localhost:5132/wp-content/uploads/2017/09/bg-history-no-overlay.png')">
-			<h1 class="white">Our History</h1>
-			<a class="btn rounded dark">View All News</a>
+		<div class="hero with-overlay bg-image with-icon" style="background-image: url(<?php the_field('cover_image');?>)">
+			<h1 class="white"><?php the_field('headline');?></h1>
+			<a class="btn rounded dark" href="<?php echo get_field('feature_cta')['url'];?>"><?php echo get_field('feature_cta')['title'];?></a>
 		</div>
 
 		<div class="container">
@@ -52,9 +52,9 @@ get_header(); ?>
 				<div class="row center-xs">
 					<div class="col-xs-12 col-sm-3">
 						<aside>
-							<h4>The Latest News</h4>
-							<p>Lorem ipsum dolor sit amet, ex duo mollis propriae detracto, bonorum electram expetendis ut duo.</p>
-							<a class="btn rounded dark">View All News</a>
+							<h4><?php the_field('section_headline');?></h4>
+							<p><?php the_field('section_copy');?></p>
+							<a class="btn rounded dark" href="<?php echo get_field('news_cta')['url'];?>"><?php echo get_field('news_cta')['title'];?></a>
 						</aside>
 					</div>
 

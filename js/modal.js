@@ -51,9 +51,9 @@
                             }, this);
                         }
                     
-                        
-                        $('.main-modal .publications .publications-content').html('<div class="bg-image" style="background-image: url('+ response.publication_image +')"></div>' + '<h3>' + response.publication_title + '</h3>'+ '<label class="main-label">' + response.publication_subtitle + '</label>' + ', ' + '<label>'  + response.publication_brief + '</label>'+', '+'<label>'  + response.publication_date + '</label>'+ '<label>' + response.no_of_pages +'</label>');
-                        
+                        if(response.post.post_type == 'publications') {
+                        $('.main-modal .publications .publications-content').html('<div class="publications-modal-img-wrapper"><img src="" class="publications-modal-img" style="background-image: url('+ response.publication_image +')"></div>' + '<h3>' + response.publication_title + '</h3>'+ '<label class="main-label">' + response.publication_subtitle + '</label>' + ', ' + '<label>'  + response.publication_brief + '</label>'+', '+'<label>'  + response.publication_date + '</label>'+ '<label>' + response.no_of_pages +'</label>');
+                        }
 
                     } else if(response.type == 'error') {
                         $('.main-modal').html('post not found');
