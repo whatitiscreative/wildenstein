@@ -13,7 +13,7 @@ get_header(); ?>
 			<div class="hero-block">
 				<div class="inner">
 					<h3 class="white">A Legacy of Prestigious Artworks</h3>
-					<p class="white">Lorem ipsum dolor sit amet, ei erant nemore vulputate vim. Singulis definiebas disputationi usu ei, hinc iusto electram ne duo. Id vel tollit legimus nostrum, at vivendo atomorum consequat vis.</p>
+					<p class="white">Lorem Ipsum dolor sit amet, ei erant nemore vulputate vim. Singulis definiebas disputationi usu ei, hinc iusto electram ne duo. Id vel tollit legimus nostrum, at vivendo atomorum consequat vis.</p>
 					<a class="btn rounded light">Notable Works</a>
 				</div>
 			</div>
