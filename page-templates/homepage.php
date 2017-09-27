@@ -38,6 +38,32 @@ get_header(); ?>
 							<p><?php the_field('artist_section_copy');?></p>
 						</div>
 					</div>
+					<!-- Pull in Artists -->
+					<?php 
+
+					$posts = get_field('featured_artists');
+
+					if( $posts ): ?>
+
+						<div class="featured-artist-row">
+							<div class="row center-xs">
+								<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+									<?php setup_postdata($post); ?>
+										<div class="col-xs-12 col-sm-3">
+											<a href="<?php the_permalink(); ?>">
+												<div class="img-wrap">
+													<?php the_post_thumbnail(); ?>
+												</div>
+												<p><?php the_title(); ?></p>
+											</a>
+										</div>
+								<?php endforeach; ?>
+							</div>
+						</div>
+						
+						<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+					<?php endif; ?>
+
 				</div>
 			</section>
 		</div>

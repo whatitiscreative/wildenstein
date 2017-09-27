@@ -4,4 +4,21 @@
     section {
         padding: 14rem 0;
     }
+
+    .featured-artist-row {
+        margin-top: 10rem;
+
+        .img-wrap {
+            margin-bottom: 1.2rem;
+        }
+
+        p {
+            font-size: 1.3rem;
+            line-height: 26px;
+        }
+
+        .col-sm-3 {
+            padding: 0 15px;
+        }
+    }
 }
