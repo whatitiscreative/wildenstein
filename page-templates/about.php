@@ -9,9 +9,10 @@
 
 get_header(); ?>
 	<main>
-		<div class="hero with-overlay bg-image with-icon" style="background-image: url('<?php the_field('cover_image'); ?>')">
+		<div class="hero with-overlay bg-image with-icon framed" style="background-image: url('<?php the_field('cover_image'); ?>')">
 			<h1 class="white">About Us</h1>
-			<!-- <span class="down-arrow"></span> -->
+			<label><?php the_field('scroll_cta'); ?></label>
+			<span class="down-arrow"></span>
 		</div>
 		<?php if(have_rows('content_blocks')):?>
 			<?php while(have_rows('content_blocks')): the_row(); ?>

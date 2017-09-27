@@ -15,8 +15,7 @@
     h2,
     h3,
     p,
-    a,
-    span, {
+    a {
         position: relative;
         z-index: 1;
     }
@@ -33,6 +32,17 @@
     .date {
         font-size: 1.5rem;
         color: rgba(255,255,255,0.8);
+    }
+
+    label {
+        font-size: 1.1rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.15rem;
+        color: $color-white;
+        z-index: 1;
+        position: absolute;
+        bottom: calc(5vh + 55px);    
     }
 
     &.with-overlay {
@@ -58,6 +68,11 @@
             background-size: 400px;
             position: absolute;
         }
+    }
+
+    &.framed {
+        margin: 0 40px 40px 40px;
+        max-width: calc(100% - 80px);    
     }
 
     &.split-screen {
@@ -101,3 +116,4 @@
         }
     }
 }
+
