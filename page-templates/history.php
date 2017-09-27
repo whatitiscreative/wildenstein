@@ -12,8 +12,9 @@ get_header(); ?>
     <div class="hero with-overlay bg-image with-icon framed" style="background-image: url('<?php the_field('cover_image'); ?>')">
         <h1 class="white">Our History</h1>
         <label><?php the_field('scroll_cta'); ?></label>
-        <span class="down-arrow"></span>
+        <a class="down-arrow" href="#anchorHistory" rel="relativeanchor"></a>
     </div>
+    <div id="anchorHistory"></div>
     <?php if(have_rows('content_blocks')):?>
         <?php while(have_rows('content_blocks')): the_row(); ?>
             <section class="section-block">
