@@ -49,6 +49,15 @@ get_header(); ?>
 
 		<div class="container">
 			<section class="latest-news">
+
+				<?php 
+					// Query for the 3 latest news stories
+					$the_query = new WP_Query( array(
+						'post_type' => 'news',
+						'posts_per_page' => 3,
+					)); 
+				?>
+
 				<div class="row center-xs">
 					<div class="col-xs-12 col-sm-3">
 						<aside>
@@ -59,43 +68,26 @@ get_header(); ?>
 					</div>
 
 					<div class="col-xs-12 col-sm-8">
-						<div class="row">
-							<div class="col-xs-12 col-sm-4">
-								<a href="#">
-									<div class="fill">
-										<img src="http://localhost:5132/wp-content/uploads/2017/09/news2.png">
-									</div>
-								</a>
-							</div>
+						<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+							<div class="row">
+								<div class="col-xs-12 col-sm-4">
+									<a href="<?php the_permalink(); ?>">
+										<div class="fill">
+											<?php the_post_thumbnail('alm-cta'); ?>
+										</div>
+									</a>
+								</div>
 
-							<div class="col-xs-12 col-sm-8">
-								<div class="news-info">
-									<span class="date">05.22.2017</span>
-									<a href="#"><h4>News Title</h4></a>
-									<p>This is news</p>
-									<a class="read-more" href="#" class="with-arrow"><span class="chevron-arrow-right"></span>Read More</a>
+								<div class="col-xs-12 col-sm-8">
+									<div class="news-info">
+										<span class="date"><?php the_date('m.j.Y'); ?></span>
+										<a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
+										<p><?php the_excerpt(); ?></p>
+										<a class="read-more" href="<?php the_permalink(); ?>" class="with-arrow"><span class="chevron-arrow-right"></span>Read More</a>
+									</div>
 								</div>
 							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-xs-12 col-sm-4">
-								<a href="#">
-									<div class="fill">
-										<img src="http://localhost:5132/wp-content/uploads/2017/09/news2.png">
-									</div>
-								</a>
-							</div>
-
-							<div class="col-xs-12 col-sm-8">
-								<div class="news-info">
-									<span class="date">05.22.2017</span>
-									<a href="#"><h4>News Title</h4></a>
-									<p>This is news</p>
-									<a class="read-more" href="#" class="with-arrow"><span class="chevron-arrow-right"></span>Read More</a>
-								</div>
-							</div>
-						</div>
+						<?php endwhile; ?>
 
 					</div>
 				</div>
