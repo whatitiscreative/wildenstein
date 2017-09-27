@@ -52,7 +52,13 @@
     
     
             $(document).ready(function() {
-                $( ".nav-items" ).append( $('.logo') );            
+                $( ".nav-items" ).prepend( $('.logo, .nav-controls') );
+                
+                $('.nav-controls').on('click', function(){
+                    $(this).toggleClass('active');
+                    $('.nav-items').toggleClass('active');
+                    $('.nav-items li').fadeToggle(400);                    
+                })
             });            
     
         

@@ -52,6 +52,12 @@
 	
 	<nav class="main-naviation">
 		<div class="logo"></div>
+		<div class="nav-controls">
+			<span class="line line-1"></span>
+			<span class="line line-2"></span>
+			<span class="line line-3"></span>
+		</div>
+
 		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-items' ) ); ?>
 	</nav>
 
