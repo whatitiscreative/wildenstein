@@ -16,22 +16,22 @@ get_header(); ?>
     </div>
     <?php if(have_rows('content_blocks')):?>
         <?php while(have_rows('content_blocks')): the_row(); ?>
-        <section class="section-block">
-            <div class="container">
-                <div class="row center-xs">
-                    <div class="col-xs-12 col-sm-4"> 
-                        <img src="<?php the_sub_field('section_image'); ?>">
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-sm-offset-1"> 
-                        <div class="text-block">
-                            <span class="date"><?php (the_sub_field('year'));?></span>
-                            <h3><?php (the_sub_field('headline'));?></h3>
-                            <p><?php (the_sub_field('body_copy'));?></p>
+            <section class="section-block">
+                <div class="container">
+                    <div class="row center-xs">
+                        <div class="col-xs-12 col-sm-4"> 
+                            <img src="<?php the_sub_field('section_image'); ?>">
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-sm-offset-1"> 
+                            <div class="text-block">
+                                <span class="date"><?php (the_sub_field('year'));?></span>
+                                <h3><?php (the_sub_field('headline'));?></h3>
+                                <p><?php (the_sub_field('body_copy'));?></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
         <?php endwhile;?>
     <?php endif;?>
 </main>

@@ -72,7 +72,8 @@
 
     &.framed {
         margin: 0 40px 40px 40px;
-        max-width: calc(100% - 80px);    
+        max-width: calc(100% - 80px);   
+        height: calc(100vh - 70px);        
     }
 
     &.split-screen {
