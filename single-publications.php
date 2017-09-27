@@ -21,12 +21,12 @@ get_header(); ?>
                                         <h3><?php the_field('publication_title'); ?></h3>
                                         <label class="main-label"><?php the_field('publication_subtitle'); ?></label>
                                         <label><?php the_field('publication_brief'); ?></label>
-                                        <label><?php the_field('no_of_pages'); ?></label>
+                                        <label><?php the_field('no_of_pages'); ?>Pages</label>
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-5">
-                                    <div class="publications-image">
-                                        <div class="bg-image" style="background-image: url(<?php the_field('publication_image'); ?>)"></div>
+                                    <div class="publications-modal-img-wrapper">
+                                        <img class="publications-modal-img" src="" style="background-image: url(<?php the_field('publication_image'); ?>)">
                                     </div>
                                 </div>
 
