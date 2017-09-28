@@ -35,8 +35,12 @@ h1 {
 }
 
 h2 {
-  font-size: 6.2rem;
+  font-size: 3.2rem;
   letter-spacing: 0.16rem;
+
+  @include MQ(S) {
+    font-size: 6.2rem;
+  }
 }
 
 h3 {
@@ -46,14 +50,25 @@ h3 {
 }
 
 h4 {
-  font-size: 2.1rem;
-  line-height: 30px;
-  letter-spacing: 0.035rem;
+  font-size: 1.6rem;
+  line-height: 21px;
+
+  @include MQ(S) {
+    font-size: 2.1rem;
+    line-height: 30px;
+    letter-spacing: 0.035rem;  
+  }
 }
 
 p {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: $color-grey-dark;
+  line-height: 23px;  
+
+  @include MQ(S) {
+    font-size: 1.6rem; 
+    line-height: 26px;    
+  }
 
   &.small {
     font-size: 1.3rem;
@@ -94,6 +109,9 @@ label {
   font-weight: 600;
   color: $color-border;
   line-height: 30px;
-  margin-bottom: 1.0rem;
   display: inline-block;
+
+  @include MQ(S) {
+    margin-bottom: 1.0rem;    
+  }
 }

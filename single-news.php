@@ -14,7 +14,7 @@ get_header(); ?>
 			// Start the Loop.
 			while ( have_posts() ) : the_post(); ?>
 				<main>
-					<div class="hero with-overlay bg-image" style="background-image: url(<?php the_field('cover_image'); ?>)">
+					<div class="hero with-overlay bg-image framed" style="background-image: url(<?php the_field('cover_image'); ?>)">
 						<span class="date"><?php the_date('m.j.Y'); ?></span>
 						<h2 class="white"><?php the_title();?></h2>
 						<span class="down-arrow"></span>
