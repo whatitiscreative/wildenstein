@@ -42,17 +42,23 @@
                             console.log('Publications Date', response.publication_date);
                             console.log('No of Pages', response.no_of_pages);
 
-                            // add the data to the modal (just an example)
+                            // add the data to the modal
                             $('.main-modal .artist-bio').html('<h3>' + response.artist_name + '</h3>' + '<label>' + response.nationality + '</label>' + '<label>' + response.date_of_birth + '</label>' + '<label>' + response.date_of_death + '</label>' + '<p class="small">' + response.bio + '</p>');
 
+                            // loop through gallery and add each image and data as a slide
                             response.artist_gallery.forEach(function(slide) {
                                 console.log('Slide Data:', slide);
                                 $('.main-modal .gallery-slider').append('<div><div class="bg-image" style="background-image: url('+ slide.image +')"></div>' + '<label class="main-label">' + slide.title + '</label></div>');
                             }, this);
+
+                            // reinstantiate the slider
+                            $('.gallery-slider').slick({
+                                dots: true
+                            });
                         }
                     
                         if(response.post.post_type == 'publications') {
-                        $('.main-modal .publications .publications-content').html('<div class="publications-modal-img-wrapper"><img src="" class="publications-modal-img" style="background-image: url('+ response.publication_image +')"></div>' + '<h3>' + response.publication_title + '</h3>'+ '<label class="main-label">' + response.publication_subtitle + '</label>' + ', ' + '<label>'  + response.publication_brief + '</label>'+', '+'<label>'  + response.publication_date + '</label>'+ '<label>' + response.no_of_pages +'</label>');
+                            $('.main-modal .publications .publications-content').html('<div class="publications-modal-img-wrapper"><img src="" class="publications-modal-img" style="background-image: url('+ response.publication_image +')"></div>' + '<h3>' + response.publication_title + '</h3>'+ '<label class="main-label">' + response.publication_subtitle + '</label>' + ', ' + '<label>'  + response.publication_brief + '</label>'+', '+'<label>'  + response.publication_date + '</label>'+ '<label>' + response.no_of_pages +'</label>');
                         }
 
                     } else if(response.type == 'error') {
