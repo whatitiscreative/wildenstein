@@ -75,12 +75,6 @@
     z-index: 10;
     @include global-transition;
 
-    // &.active {
-    //     opacity: 1;
-    //     z-index: 10;   
-    //     @include global-transition;
-    // }
-
     @include MQ(S) {
         overflow: hidden;
     }
@@ -91,7 +85,7 @@
         right: 30px;
     }
 }
-.publications {
+
 .single-publications-content {
     height: 100vh;
     display: flex;
@@ -107,27 +101,33 @@
             
                 label {
                     font-family: $font-secondary;
-                    border-bottom: 1px solid $color-border;
-                    padding-bottom: 3.6rem;
+                    //border-bottom: 1px solid $color-border;
+                    //padding-bottom: 3.6rem;
                     margin-bottom: 3.6rem;
                 }    
-        .pub-border{
+         .pub-border{
             border-bottom: 1px solid $color-border;
-            padding-bottom: 3.6rem;
-            color: $color-grey;
-        } 
-        .date{
-            font-style: italic;
-        }
-        .pub-font{
+             padding-bottom: 3.6rem;
+             color: $color-grey;
+         } 
+        // .date{
+        //     font-style: italic;
+        // }
+         .pub-font{
 
             font-family: Avenir Next; 
+            font-size: small;
         }
-        p{
+        .pub_date{
 
-            margin-top: 3rem;
-            margin-bottom: 2rem;
+            color: $color-grey;
+            font-style: italic;
         }
+        // p{
+
+        //     margin-top: 3rem;
+        //     margin-bottom: 2rem;
+        // }
     }
 
     .gallery-slider {
@@ -153,12 +153,20 @@
             font-size: 1.3rem;
         }
     }
+    
 }
 
-    .publications-info {
-        p {
-            font-family: $font-secondary;
-        }
+.modal-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+.publications-info {
+    p {
+        font-family: $font-secondary;
     }
 }
+
+    
+
 

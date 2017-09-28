@@ -25,14 +25,14 @@ get_header(); ?>
                         <ul class="advanced-filter-menu radio-select" data-type="radio" data-parameter="orderby">                    
                             <li>
                                 <div class="radio-wrap">
-                                    <input id="alphabetical" name="radio-group" type="radio" value="title" checked>
+                                    <input id="alphabetical" name="radio-group" type="radio" value="title" checked="checked"/>
                                     <label for="alphabetical">Alphabetical</label>
                                 </div>
                             </li>
 
                             <li>
                                 <div class="radio-wrap">
-                                    <input id="chronological" name="radio-group" type="radio" value="date">
+                                    <input id="chronological" name="radio-group" type="radio" value="date_of_birth">
                                     <label for="chronological">Chronological</label>
                                 </div>
                             </li>
