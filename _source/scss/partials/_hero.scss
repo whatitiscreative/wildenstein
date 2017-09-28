@@ -91,6 +91,7 @@
         height: auto;
         position: relative;
         padding-top: 64px;
+        max-height: 1000px;
 
         @include MQ(XS) {
             flex-direction: row-reverse;   
