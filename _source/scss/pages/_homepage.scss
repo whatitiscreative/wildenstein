@@ -2,11 +2,19 @@
 // ------------------------------------------------------------------------------------------------
 .home {
     section {
-        padding: 14rem 0;
+        padding: 6.0rem 0;
+
+        @include MQ(S) {
+            padding: 14rem 0;            
+        }
     }
 
     .featured-artist-row {
-        margin-top: 10rem;
+        margin: 5.0rem 0;
+
+        @include MQ(S) {
+            margin: 10rem 0 0 0;            
+        }
 
         .img-wrap {
             margin-bottom: 1.2rem;
@@ -15,6 +23,7 @@
         p {
             font-size: 1.3rem;
             line-height: 26px;
+            margin-bottom: 1.2rem;
         }
 
         .col-sm-3 {

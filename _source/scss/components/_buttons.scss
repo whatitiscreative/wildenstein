@@ -53,4 +53,12 @@
             }    
         }
     }
+
+    &.block-mobile {
+        @media screen and (max-width: 991px) {
+            width: 100%;
+            border-radius: 0;
+            padding: 14px 0;        
+        }
+    }
 }

@@ -9,25 +9,28 @@
 .news-index, 
 .latest-news {
     .news-info {
-        padding: 3.4rem 0 0;
-
+        padding: 0 0 0 2.0rem;
+        
         @include MQ(S) {
             padding: 0 0 0 3.4rem;
         }
     }
 
     .fill {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        height: 200px;
-        
-        img {
+
+        @include MQ(S) {
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden        
+            overflow: hidden;
+            height: 200px;
+            
+            img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden        
+            }    
         }
     }
 
@@ -73,7 +76,12 @@
     }
 
     .row {
-        margin-bottom: 4.8rem;
+        margin-bottom: 3.0rem;
+
+        @include MQ(S) {
+            margin-bottom: 4.8rem;
+            
+        }
     }
 
     aside {

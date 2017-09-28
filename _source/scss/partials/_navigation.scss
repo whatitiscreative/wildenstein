@@ -52,10 +52,7 @@
           display: block !important; 
         } 
 
-        &.current_page_item {
-            border-top: 1px solid $color-blue-dark;
-            border-bottom: 1px solid $color-blue-dark;
-            
+        &.current_page_item {            
             @include MQ(M) {
               border-top: 2px solid $color-blue-dark;
               border-bottom: 2px solid $color-blue-dark;  
@@ -76,6 +73,7 @@
     .nav-items {
       flex-direction: column;
       align-items: stretch;
+      border-bottom: 1px solid $color-border;      
 
       .logo {
         order: 0;
@@ -90,6 +88,10 @@
         text-align: center;
         border-bottom: 1px solid #111;
         display: none;
+
+        &:first-child {
+          border-top: 1px solid $color-blue-dark;          
+        }
       }  
 
       &.active {
@@ -100,23 +102,6 @@
   }
 
   // Close Navigation Menu
-
-// .nav-controls {
-//   cursor: pointer;
-//   content: '';
-//   background: url('../../images/close-nav.svg');
-//   height: 16px;
-//   width: 16px;
-//   background-size: 16px;
-//   display: block;
-//   position: absolute;
-//   top: 20px;
-//   right: 24px;
-
-//   @include MQ(M) {
-//     display: none
-//   }
-// }
 
 .nav-controls {
   cursor: pointer;  

@@ -108,9 +108,14 @@
 
 aside {
   h4 {
-    font-size: 3.0rem;
-    line-height: 46px;
-    letter-spacing: 0.05rem;
+    font-size: 2.6rem;
+    line-height: 32px;
+  
+    @include MQ(S) {
+      font-size: 3.0rem;
+      line-height: 46px;
+      letter-spacing: 0.05rem;  
+    }
   }
 
   h4,
@@ -154,5 +159,23 @@ aside {
   }
   &::after {
     transform: rotate(-45deg);
+  }
+}
+
+// MOBILE HACKS
+
+.desktop {
+  display: none !important;
+
+  @include MQ(S) {
+    display: block !important;
+  }
+}
+
+.mobile {
+  display: block !important;
+
+  @include MQ(S) {
+    display: none !important;
   }
 }
