@@ -808,13 +808,25 @@ function get_post_ajax() {
 				//Publications ACF data
 				'page_title'					=> get_field('page_title', $id),
 				'publications_overview_text'	=> get_field('publications_overview_text', $id),
-				'publication_image'				=> get_field('publication_image',$id),
+				//'publication_image'				=> get_field('publication_image',$id),
 				'publication_date'				=> get_field('publication_date', $id),
 				'publication_title'				=> get_field('publication_title', $id),
 				'publication_subtitle'			=> get_field('publication_subtitle', $id),
 				'publication_brief'				=> get_field('publication_brief', $id),
 				'no_of_pages'					=> get_field('no_of_pages', $id),
 			];
+
+			$i = 0;
+			if(have_rows('image_gallery', $id)) {
+				while(have_rows('image_gallery', $id)) {  
+					the_row();  
+					$result['image_gallery'][$i] = [
+						'image' => get_sub_field('image'),
+						'image_caption' => get_sub_field('image_caption'),
+					];
+					$i++;
+				}
+			}
 		}
 
 	} else {
