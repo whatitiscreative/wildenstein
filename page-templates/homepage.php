@@ -69,7 +69,7 @@ get_header(); ?>
 			</section>
 		</div>
 
-		<div class="hero with-overlay bg-image with-icon framed" style="background-image: url(<?php the_field('cover_image');?>)">
+		<div class="hero with-overlay bg-image with-icon framed in-page" style="background-image: url(<?php the_field('cover_image');?>)">
 			<h1 class="white"><?php the_field('headline');?></h1>
 			<a class="btn rounded dark" href="<?php echo get_field('feature_cta')['url'];?>"><?php echo get_field('feature_cta')['title'];?></a>
 		</div>
