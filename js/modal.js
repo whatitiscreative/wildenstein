@@ -25,7 +25,7 @@
                             $('.main-modal.notable-works .notable-works-content').html('<div class="nw-modal-img-wrapper"><img class="nw-modal-img" src="' + response.image + '"></div>' + '<label>' + response.artist_name + '</label>' + ', ' + '<label class="main-label">' + response.title + '</label>'+ '<label>' + ', ' + response.supporting_details + '</label>');
                         }
 
-                        if(response.post.post_type == 'artists') {
+                        if(response.post.post_type == 'artist') {
                             // list out your variables from the response
                             console.log('Nationality:', response.nationality);
                             console.log('Bio:', response.bio);
@@ -53,17 +53,20 @@
                     
                         if(response.post.post_type == 'publications') {
 
-                            var output ='';
-                           // output = '<div class="main-modal publications">';
-                           //     output += '<div class="container">';
-                                    output = '<div class="row around-xs">';
-                                        output += '<div class="col-xs-12 col-sm-6">';
-                                            output += '<div class="publications-modal-img-wrapper">';
-                                                output += '<img class="publications-modal-img" src="'+response.publication_image+'">';
+                        var output ='';
+                           output = '<div class="main-modal publications">';
+                             output += '<div class="container">';
+                                output += '<section class="single-publications-content">';
+                                    output += '<div class="row around-xs">';
+                                        output += '<div class="col-xs-12 col-sm-5">';
+                                            output += '<div class="publications-img">';
+                                                output += '<div class="gallery-slider">';
+                                                    output += '<div class="bg-image" style="background-image: url('+ response.publication_image +')">';
+                                                output += '</div>';
                                             output += '</div>';
                                         output += '</div>';
-
-                                        output += '<div class="col-xs-12 col-sm-6">';
+                                        
+                                        output += '<div class="col-xs-12 col-sm-5">';
                                             output += '<div class="publications-content">';
                                                 output += '<label>'+ response.publication_date +'</label>';
                                                 output += ' <h3>'+response.publication_title +'</h3>';
@@ -73,10 +76,13 @@
                                             output += '</div>';
                                         output += '</div>';
                                     output += '</div>';
-                              //  output += '</div>';
-                             //   output += '<div class="modal-close">CLOSE</div>';
-                          //  output += '</div>';
-                        $('.main-modal.publications').html(output);
+                                output += '</section>';
+                              output += '</div>'
+                             //output += '<div class="modal-close">CLOSE</div>';
+                            output += '</div>';
+                        
+                        
+                            $('.main-modal.publications').html(output);
                         
                         }
 

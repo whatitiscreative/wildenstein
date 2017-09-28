@@ -1,25 +1,116 @@
 // Publications Specific Styles
 // ------------------------------------------------------------------------------------------------
 
-.publications {
-    .publications-content{
-       // padding: 6.0rem 20% 0 0;
-        margin-top:10rem;
-        padding-top: 15rem;
-        padding-left: 10rem;
-        padding-right: 20%;
-        //padding-bottom: 15rem;
+//.publications {
+    // .publications-content{
+    //     padding: 6.0rem 20% 0 0;
+        
+    //             h3 {
+    //                 margin-bottom: 1.0rem;
+    //             }
+            
+    //             label {
+    //                 font-family: $font-secondary;
+    //                 border-bottom: 1px solid $color-border;
+    //                 padding-bottom: 3.6rem;
+    //                 margin-bottom: 3.6rem;
+    //             }    
+    //     .pub-border{
+    //         border-bottom: 1px solid $color-border;
+    //         padding-bottom: 3.6rem;
+    //         color: $color-grey;
+    //     } 
+    //     .date{
+    //         font-style: italic;
+    //     }
+    //     .pub-font{
 
-        h3 {
-            margin-bottom: 1.0rem;
-            //text-align: center;
-        }
+    //         font-family: Avenir Next; 
+    //     }
+    //     p{
+
+    //         margin-top: 3rem;
+    //         margin-bottom: 2rem;
+    //     }
+    // }
+    // .publications-modal-img-wrapper {
+    //     height: calc(100vh - 220px);
+    //     margin: 0 auto;
+    //     text-align: center;
+    //     margin-top: 12rem;
+    //     margin-left: 12rem;
+    // }
     
-        label {
-            font-family: $font-secondary;
-            color: $color-grey;
-            margin-bottom: 3.6rem;
-        }   
+    // .publications-modal-img {
+    //     height: 100%;
+    //     width: auto;
+    //     margin-top: 5rem;
+    // }
+    // .modal-close {
+    //     position: absolute;
+    //     top: 30px;
+    //     right: 30px;
+    // }
+    // .publications-modal-wrapper {
+    //     height: calc(100vh - 200px);
+    //     margin: 0 auto;
+    //    // text-align: center;
+    //     margin-top: 5rem;
+    //     //margin-left: 5rem;
+
+    
+    // }
+    
+//}
+
+.main-modal {
+    position: fixed;
+    background: $color-white;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: scroll;
+    display: none;
+    z-index: 10;
+    @include global-transition;
+
+    // &.active {
+    //     opacity: 1;
+    //     z-index: 10;   
+    //     @include global-transition;
+    // }
+
+    @include MQ(S) {
+        overflow: hidden;
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+}
+.publications {
+.single-publications-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    .publications-content{
+        padding: 6.0rem 20% 0 0;
+        
+                h3 {
+                    margin-bottom: 1.0rem;
+                }
+            
+                label {
+                    font-family: $font-secondary;
+                    border-bottom: 1px solid $color-border;
+                    padding-bottom: 3.6rem;
+                    margin-bottom: 3.6rem;
+                }    
         .pub-border{
             border-bottom: 1px solid $color-border;
             padding-bottom: 3.6rem;
@@ -38,34 +129,36 @@
             margin-bottom: 2rem;
         }
     }
-    .publications-modal-img-wrapper {
-        height: calc(100vh - 220px);
-        margin: 0 auto;
-        text-align: center;
-        margin-top: 12rem;
-        margin-left: 12rem;
-    }
-    
-    .publications-modal-img {
-        height: 100%;
-        width: auto;
-        margin-top: 5rem;
-    }
-    .modal-close {
-        position: absolute;
-        top: 30px;
-        right: 30px;
-    }
-    // .publications-modal-wrapper {
-    //     height: calc(100vh - 200px);
-    //     margin: 0 auto;
-    //    // text-align: center;
-    //     margin-top: 5rem;
-    //     //margin-left: 5rem;
 
-    
-    // }
-    
+    .gallery-slider {
+        height: 670px;    
+        
+        @media screen and (max-height: 800px){
+            height: 570px;    
+        }
+        
+        .bg-image {
+            height: 570px;
+            background-size: contain;
+            @media screen and (max-height: 800px){
+                height: 470px;
+           }                
+        }
+
+        label {
+            height: 65px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            font-size: 1.3rem;
+        }
+    }
 }
 
+    .publications-info {
+        p {
+            font-family: $font-secondary;
+        }
+    }
+}
 

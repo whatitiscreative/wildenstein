@@ -12,13 +12,16 @@ get_header(); ?>
 		<div id="content" class="site-content" role="main">
 			<div class="main-modal publications">
 				<div class="container">
+                <section class="single-publications-content">
                     <div class="row around-xs">
-                        <div class="col-xs-12 col-sm-6">
-                            <div class="publications-modal-img-wrapper">
-                                <img class="publications-modal-img" src="<?php the_field('publication_image');?>">
+                        <div class="col-xs-12 col-sm-5">
+                            <div class="publications-img">
+                                <div class="gallery-slider">
+                                    <div class="bg-image"  style="background-image: url(<?php the_field('publication_image'); ?>)">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-6">
+                        <div class="col-xs-12 col-sm-5">
                             <div class="publications-content">
                                 <label><?php the_field('publication_date');?></label>
                                 <h3><?php the_field('publication_title'); ?></h3>
@@ -29,6 +32,7 @@ get_header(); ?>
                         </div>
                         
                     </div>
+                </section>    
                 </div>
 			</div>
 		</div><!-- #content -->

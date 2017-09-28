@@ -28,21 +28,24 @@ get_header(); ?>
 
         <div class="main-modal publications">
             <div class="container">
+                <section class="single-publications-content">
                     <div class="row around-xs">
-                        <div class="col-xs-12 col-sm-6">
-                            <div class="publications-content">
-                                    
-                            </div>
+                        <div class="col-xs-12 col-sm-5">
+                            <div class="publications-img">
+                                <div class="gallery-slider">
+                                        
+                                </div>
+                            </div>    
                         </div>
-                        <div class="col-xs-12 col-sm-6">
-                            <div class="publications-modal-img-wrapper">
+
+                        <div class="col-xs-12 col-sm-5">
+                            <div class="publications-content">
 
                             </div>
                         </div>
                     </div>
-                
-            </div>
-
+                </section>
+            </div>    
             <div class="modal-close">CLOSE</div>
         </div>
     </main>
