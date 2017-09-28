@@ -94,7 +94,7 @@
                            
                            //---------Publication Image Slider---------//
                             // add the data to the modal
-                            $('.main-modal .publications-content').html('<label class="pub_date">'+ response.publication_date +'</label>' + ' <h3>'+response.publication_title +'</h3>' + '<label class="pub-border">'+response.publication_subtitle+'</label>' + '<label class="pub-font">'+ response.publication_brief+'</label>' + '<label class="pub-font"> '+'Published '+' '+ response.publication_date +''+', '+' '+response.no_of_pages+' '+' pages'+' </label>');
+                            $('.main-modal .publications-content').html('<label class="pub_date">'+ response.publication_date +'</label>' + ' <h3>'+response.publication_title +'</h3>' + '<label class="pub-border">'+response.publication_subtitle+'</label>' + '<p class="pub-font">'+ response.publication_brief+'</p>' + '<label class="pub-font"> '+'Published '+' '+ response.publication_date +''+', '+' '+response.no_of_pages+' '+' pages'+' </label>');
                             // destroy previous slider if there was one
                             if($('.slick-initialized').length != 0) {
                                 console.log('Destroying Slick Slider');
