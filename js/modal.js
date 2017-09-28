@@ -54,31 +54,31 @@
                         if(response.post.post_type == 'publications') {
 
                         var output ='';
-                           output = '<div class="main-modal publications">';
+                           output = '<div class="main-modal">';
                              output += '<div class="container">';
                                 output += '<section class="single-publications-content">';
                                     output += '<div class="row around-xs">';
                                         output += '<div class="col-xs-12 col-sm-5">';
                                             output += '<div class="publications-img">';
                                                 output += '<div class="gallery-slider">';
-                                                    output += '<div class="bg-image" style="background-image: url('+ response.publication_image +')">';
+                                                    output += '<div class="bg-image" style="background-image: url('+ response.publication_image +')"></div>';
                                                 output += '</div>';
                                             output += '</div>';
                                         output += '</div>';
                                         
                                         output += '<div class="col-xs-12 col-sm-5">';
                                             output += '<div class="publications-content">';
-                                                output += '<label>'+ response.publication_date +'</label>';
+                                                output += '<label class="pub_date">'+ response.publication_date +'</label>';
                                                 output += ' <h3>'+response.publication_title +'</h3>';
-                                                output += '<h4 class="pub-border">'+response.publication_subtitle+'</h4>';
-                                                output += '<p class="pub-font">'+ response.publication_brief+'</p>';
-                                                output += '<p class="pub-font"> '+'Published '+' '+ response.publication_date +''+', '+' '+response.no_of_pages+' '+' pages'+' </p>';
+                                                output += '<label class="pub-border">'+response.publication_subtitle+'</label>';
+                                                output += '<label class="pub-font">'+ response.publication_brief+'</label>';
+                                                output += '<label class="pub-font"> '+'Published '+' '+ response.publication_date +''+', '+' '+response.no_of_pages+' '+' pages'+' </label>';
                                             output += '</div>';
                                         output += '</div>';
                                     output += '</div>';
                                 output += '</section>';
                               output += '</div>'
-                             //output += '<div class="modal-close">CLOSE</div>';
+                             output += '<div class="modal-close">CLOSE</div>';
                             output += '</div>';
                         
                         
