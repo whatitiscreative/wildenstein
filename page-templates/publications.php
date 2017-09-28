@@ -17,8 +17,8 @@ get_header(); ?>
            
             <!-- <div class="row"> -->
                 <!-- <div class=> -->
-                    <section class="masonry-layout">
-                        <?php echo do_shortcode('[ajax_load_more repeater="template_5" post_type="publications" order="ASC" pause="false" scroll="true" posts_per_page="12" transition="masonry" masonry_selector=".grid-item" masonry_animation="slide-up" ]'); ?>
+                    <section class="masonry-layout col-4-layout">
+                        <?php echo do_shortcode('[ajax_load_more repeater="template_2" post_type="publications" order="ASC" pause="false" scroll="true" posts_per_page="12" transition="masonry" masonry_selector=".grid-item" masonry_animation="slide-up" ]'); ?>
                     </section>
                 <!-- </div> -->
             <!-- </div> -->
