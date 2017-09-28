@@ -25,7 +25,7 @@
                             $('.main-modal.notable-works .notable-works-content').html('<div class="nw-modal-img-wrapper"><img class="nw-modal-img" src="' + response.image + '"></div>' + '<label>' + response.artist_name + '</label>' + ', ' + '<label class="main-label">' + response.title + '</label>'+ '<label>' + ', ' + response.supporting_details + '</label>');
                         }
 
-                        if(response.post.post_type == 'artists') {
+                        if(response.post.post_type == 'artist') {
                             // list out your variables from the response
                             console.log('Nationality:', response.nationality);
                             console.log('Bio:', response.bio);

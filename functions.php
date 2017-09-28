@@ -774,7 +774,7 @@ function get_post_ajax() {
 			];
 		}
 
-		if($post['post_type'] == 'artists') {
+		if($post['post_type'] == 'artist') {
 			$result = [
 				'type' 			=> 'success',
 				'post'			=> $post,

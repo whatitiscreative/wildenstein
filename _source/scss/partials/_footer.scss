@@ -77,7 +77,7 @@ footer {
     }
 
 
-    @include MQ(XS) {
+    @include MQ(S) {
         display: flex;
         
         .footer-block {
