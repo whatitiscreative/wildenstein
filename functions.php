@@ -755,7 +755,6 @@ function get_post_ajax() {
 	// get the post data
 	$post = get_post($id, 'ARRAY_A');
 
-
 	// if it was successful, then let's get data
 	if(!is_wp_error($post)) {
 
@@ -827,9 +826,10 @@ function get_post_ajax() {
 	// and could directly assign the html to the modal
 	echo json_encode($result);
 
-	die(1);
+	die();
 
 	// var_dump($post);
 }
 add_action('wp_ajax_get_post_ajax', 'get_post_ajax');
+add_action('wp_ajax_nopriv_get_post_ajax', 'get_post_ajax');
  
