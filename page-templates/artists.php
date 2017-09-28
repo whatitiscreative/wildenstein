@@ -123,7 +123,7 @@ get_header(); ?>
                     </div>
                 </section>
             </div>
-            <div class="modal-close">CLOSE</div>
+            <span class="close modal-close"></span>
         </div>
     </main>
 

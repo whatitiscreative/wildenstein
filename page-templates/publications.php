@@ -45,8 +45,8 @@ get_header(); ?>
                         </div>
                     </div>
                 </section>
-            </div>    
-            <div class="modal-close">CLOSE</div>
+            </div> 
+            <span class="close modal-close"></span>   
         </div>
     </main>
 

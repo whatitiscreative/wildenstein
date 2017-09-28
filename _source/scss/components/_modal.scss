@@ -27,6 +27,13 @@
         top: 30px;
         right: 30px;
     }
+
+    .close {
+        &::before, &::after {
+            content: '';
+            background: $color-grey-dark;
+          }        
+    }
 }
 
 // Contact Modal
@@ -74,3 +81,4 @@
         }
     }
 }
+
