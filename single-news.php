@@ -17,9 +17,9 @@ get_header(); ?>
 					<div class="hero with-overlay bg-image framed" style="background-image: url(<?php the_field('cover_image'); ?>)">
 						<span class="date"><?php the_date('m.j.Y'); ?></span>
 						<h2 class="white"><?php the_title();?></h2>
-						<span class="down-arrow"></span>
+						<a class="down-arrow" href="#anchorNews" rel="relativeanchor"></a>
 					</div>
-
+					<div id="anchorNews"></div>					
 					<?php if(have_rows('article_content')):?>
 						<?php while(have_rows('article_content')): the_row(); ?>
 							<?php if (get_row_layout() == 'text_block'):?>
