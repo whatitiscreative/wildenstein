@@ -127,17 +127,9 @@
                    obj[parameter] = value; // add value(s) to obj
                    
                });
-<<<<<<< HEAD
                               
                var data = obj;
                console.log('Data:', data);
-=======
-               
-               var data = obj;
-               
-               // console.log('Filtering Data:', data);
-               
->>>>>>> a30ea56b6ade4a37fbcae0ca90b4101a21089728
                $.fn.almFilter('fade', '300', data); // Send data to Ajax Load More
            }
     

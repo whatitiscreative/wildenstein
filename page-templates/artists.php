@@ -97,7 +97,8 @@ get_header(); ?>
 
             <section class="masonry-layout">
                 <?php // echo do_shortcode('[ajax_load_more id="artists" post_type="artist" order="ASC" orderby="title" taxonomy="taxonomy" taxonomy_terms="" taxonomy_operator="IN" pause="false" scroll="true" posts_per_page="12"]'); ?>
-                <?php echo do_shortcode('[ajax_load_more id="artists" post_type="artist" order="ASC" orderby="meta_value" meta_key="last_name" taxonomy="taxonomy" taxonomy_terms="" taxonomy_operator="IN" pause="false" scroll="true" posts_per_page="12" transition="masonry" masonry_selector=".grid-item" masonry_animation="slide-up" ]'); ?>
+                <?php echo do_shortcode('[ajax_load_more id="artists" post_type="artist" order="ASC" orderby="last_name" meta_key="date_of_birth" taxonomy="taxonomy" taxonomy_terms="" taxonomy_operator="IN" pause="false" scroll="true" posts_per_page="12" transition="masonry" masonry_selector=".grid-item" masonry_animation="slide-up" ]'); ?>
+                <?php // orderby="meta_value_num" meta_key="date_of_birth" ?>
             </section>
         </div>
 
