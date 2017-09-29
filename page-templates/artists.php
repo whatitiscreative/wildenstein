@@ -32,7 +32,7 @@ get_header(); ?>
 
                             <li>
                                 <div class="radio-wrap">
-                                    <input id="chronological" name="radio-group" type="radio" value="date_of_birth">
+                                    <input id="chronological" name="radio-group" type="radio" value="meta_value_num">
                                     <label for="chronological">Chronological</label>
                                 </div>
                             </li>
@@ -66,7 +66,7 @@ get_header(); ?>
                                 <li>
                                     <div class="checkbox-wrap">
                                         <input id="drawing" value="drawing" type="checkbox">
-                                        <label for="Drawing">Drawing</label>
+                                        <label for="drawing">Drawing</label>
                                     </div>
                                 </li>
                             </div>
