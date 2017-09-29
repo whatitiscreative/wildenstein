@@ -16,7 +16,7 @@ get_header(); ?>
             </header>
 
             <section class="masonry-layout">
-                <?php echo do_shortcode('[ajax_load_more repeater="template_4" post_type="notableworks" order="ASC" pause="false" scroll="true" posts_per_page="6" transition="masonry" masonry_selector=".grid-item" masonry_animation="slide-up" ]'); ?>
+                <?php echo do_shortcode('[ajax_load_more repeater="template_3" post_type="notableworks" order="ASC" pause="false" scroll="true" posts_per_page="6" transition="masonry" masonry_selector=".grid-item" masonry_animation="slide-up" ]'); ?>
             </section>
         </div>
 
