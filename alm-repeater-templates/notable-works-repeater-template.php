@@ -1,6 +1,6 @@
 <!-- NOTABLE WORKS REPEATER TEMPLATE -->
 
-<div class="grid-item">
+<div class="grid-item notable-works">
     <a href="javascript:void(0);" class="trigger-modal" data-id="<?php echo get_the_id(); ?>" title="<?php the_title(); ?>">
     <?php the_post_thumbnail('alm-cta'); ?>
     </a>
