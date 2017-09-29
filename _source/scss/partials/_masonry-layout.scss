@@ -77,10 +77,6 @@
         }
     }
 
-    &:nth-child(3n+3) {
-        margin-right: 0;
-    }
-
     a {
         display: block;
         height: 100%;
@@ -180,13 +176,13 @@
     margin-right: -17.5px;
     
     .grid-item {
-        padding: 0 17.5px 17.5px 17.5px;
+        margin: 0 17.5px 17.5px 17.5px;
         width: calc(33.3% - 35px);
         float: left;
         position: relative;    
 
         &:nth-child(3n+3) {
-            padding: 0 0 17.5px 17.5px;
+            margin: 0 0 17.5px 17.5px;
         }
         
         @media screen and (max-width: 991px) {
@@ -203,8 +199,12 @@
             }    
 
             &:nth-child(4n+4) {
-                padding: 0 0 17.5px 17.5px;
+                margin: 0 0 17.5px 17.5px;
             }
+
+            &:nth-child(3n+3) {
+                margin: 0 17.5px 17.5px 17.5px;
+            }    
         }
     }
 }
