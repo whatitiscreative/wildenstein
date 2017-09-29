@@ -33,7 +33,7 @@ get_header(); ?>
 
 									<div class="col-xs-12 col-sm-5">
 										<div class="artist-bio">
-											<h3><?php the_field('artist_name'); ?></h3>
+											<h3><?php the_field('first_name'); ?><?php the_field('last_name'); ?></h3>
 											<label>
 												<?php if(get_field('nationality')): ?>
 													<?php the_field('nationality'); ?>:

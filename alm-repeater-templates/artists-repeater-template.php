@@ -10,3 +10,9 @@
     <label>French 1796-1875</label>    
    </div>
 </div>
+
+
+<div class="artist-info">
+    <p><?php the_title();?></p>
+    <label>French 1796-1875</label>    
+</div>
