@@ -32,7 +32,7 @@ get_header(); ?>
 							</aside>
 						</div>
 
-						<div class="col-xs-12 col-sm-5 col-sm-offset-1">
+						<div class="col-xs-12 col-sm-5">
 							<p><?php the_field('artist_section_copy');?></p>
 						</div>
 					</div>
@@ -85,7 +85,7 @@ get_header(); ?>
 					)); 
 				?>
 
-				<div class="row center-xs">
+				<div class="row">
 					<div class="col-xs-12 col-sm-3">
 						<aside>
 							<h4><?php the_field('section_headline');?></h4>
@@ -94,7 +94,7 @@ get_header(); ?>
 						</aside>
 					</div>
 
-					<div class="col-xs-12 col-sm-8">
+					<div class="col-xs-12 col-sm-9">
 						<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 							<div class="row">
 								<div class="col-xs-5 col-sm-4">

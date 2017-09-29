@@ -198,6 +198,10 @@
         .grid-item {
             width: calc(25% - 35px);
 
+            @media screen and (max-width: 991px) {
+                width: calc(50% - 35px);
+            }    
+
             &:nth-child(4n+4) {
                 padding: 0 0 17.5px 17.5px;
             }
