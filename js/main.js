@@ -124,7 +124,7 @@
                    
                });
                
-               console.log(obj);
+               console.log('Current Filtering Object:', obj);
                
                var data = obj;      
                $.fn.almFilter('fade', '300', data); // Send data to Ajax Load More
