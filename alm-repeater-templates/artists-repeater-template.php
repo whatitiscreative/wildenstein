@@ -6,7 +6,7 @@
  </a>
 
   <div class="artist-info">
-    <p><?php the_title();?></p>
+  <p><?php the_field('first_name');?> <?php the_field('last_name');?></p>
     <label><?php the_field('nationality'); ?>, <?php the_field('date_of_birth'); ?>-<?php the_field('date_of_death'); ?></label>    
    </div>
 </div>
