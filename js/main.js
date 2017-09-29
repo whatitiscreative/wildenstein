@@ -123,10 +123,9 @@
                    obj[parameter] = value; // add value(s) to obj
                    
                });
-               
-               console.log(obj);
-               
-               var data = obj;      
+                              
+               var data = obj;
+               console.log('Data:', data);
                $.fn.almFilter('fade', '300', data); // Send data to Ajax Load More
            }
     
