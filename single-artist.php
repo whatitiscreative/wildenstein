@@ -11,7 +11,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
-			<div class="main-modal">
+			<div class="">
 				<div class="container">
 					<section class="single-artist-content">
 						<?php
