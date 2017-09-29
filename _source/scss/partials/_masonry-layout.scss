@@ -20,20 +20,6 @@
 }
 
 .grid-item{
-    width: 100%;
-    margin-right: 20px;
-    float: left;
-    position: relative;
-
-    @include MQ(XS) {
-        width: 50%;
-    }
-
-    @include MQ(S) {
-        width: 31.5%;
-        margin-right: 20px;    
-    }
-
     &:after {
         content: 'READ \A MORE';
         //border-radius:120px;
@@ -91,10 +77,6 @@
         }
     }
 
-    &:nth-child(3n+3) {
-        margin-right: 0;
-    }
-
     a {
         display: block;
         height: 100%;
@@ -114,15 +96,16 @@
         min-height: 100%;
     }
 
-    .artist-info {
-        padding: 1.6rem 0 3.2rem 0;
+    .artist-info,
+    .publications-info {
+        padding: 1.6rem 0 2.2rem 0;  
 
         p {
-            font-size: 2.4rem;
-            line-height: 30px;
+            line-height: 30px;   
             letter-spacing: 0.04rem;
+            font-family: $font-secondary;
         }
-
+        
         label {
             font-size: 1.3rem;
             line-height: 1.9rem;
@@ -132,6 +115,19 @@
         }
     }
 
+    .artist-info {
+        p {
+            font-size: 2.4rem;
+        }
+    }
+
+    .publications-info {
+        p {
+            font-size: 2.1rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+    
     .notable-works {
         padding: 1.6rem 0 3.2rem 0;
 
@@ -173,42 +169,42 @@
     }
  }
 
-//  #custom-alm-loader{
-//     opacity: 0;
-//     display: none;
-//     width: 100%;
-//     padding: 50px;
-//     margin: 0 0 20px;
-//     background: #fff;
-//     border: 2px dashed #ccc;
-//     background: url("img/ajax-loader.gif") no-repeat center center;
-//     transition: all 0.1s ease;
-//  }
- 
-// .alm-loading #custom-alm-loader{
-//     display: block;
-//     opacity: 1;
-// }
- 
+//  DEFINE MASONRY WIDTHS
 
-//  .alm-ajax {
-// 	display: -ms-flexbox;
-// 	-ms-flex-direction: column;
-// 	-ms-flex-wrap: wrap;
-// 	display: flex;
-// 	flex-direction: column;
-// 	flex-wrap: wrap;
-// 	height: 100vw;
-//     font-size: 0; 
+.masonry-layout {
+    margin-left: -17.5px;
+    margin-right: -17.5px;
     
-//     .grid-item {
-//         width: 33.3%;
-//         transition: .8s opacity;
+    .grid-item {
+        margin: 0 17.5px 17.5px 17.5px;
+        width: calc(33.3% - 35px);
+        float: left;
+        position: relative;    
+
+        &:nth-child(3n+3) {
+            margin: 0 0 17.5px 17.5px;
+        }
         
-//         img {
-//             flex-shrink: 0;
-//             min-width: 100%;
-//             min-height: 100%
-//         }
-//     }
-// }
+        @media screen and (max-width: 991px) {
+            width: calc(50% - 35px);
+        }
+    }
+
+    &.col-4-layout {
+        .grid-item {
+            width: calc(25% - 35px);
+
+            @media screen and (max-width: 991px) {
+                width: calc(50% - 35px);
+            }    
+
+            &:nth-child(4n+4) {
+                margin: 0 0 17.5px 17.5px;
+            }
+
+            &:nth-child(3n+3) {
+                margin: 0 17.5px 17.5px 17.5px;
+            }    
+        }
+    }
+}

@@ -11,16 +11,18 @@ get_header(); ?>
 <div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 			<div class="main-modal">
+				<div class="display">
 				<div class="notable-works-content">
 					
 						<div class="nw-modal-img-wrapper">
 							<img class="nw-modal-img" src="" style="background-image: url(<?php the_field('image'); ?>)">
 						</div>
 						<div class="layout">
-							<label><?php the_field('artist_name'); ?></label>
+							<p><?php the_field('artist_name'); ?></p>
 							<label class="main-label"><?php the_field('title'); ?></label>
 							<label><?php the_field('supporting_details'); ?></label>								
 						</div>
+				</div>
 				</div>
 			</div>
 		</div><!-- #content -->

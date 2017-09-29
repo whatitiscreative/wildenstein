@@ -17,8 +17,8 @@ get_header(); ?>
            
             <!-- <div class="row"> -->
                 <!-- <div class=> -->
-                    <section class="masonry-layout">
-                        <?php echo do_shortcode('[ajax_load_more repeater="template_5" post_type="publications" order="ASC" pause="false" scroll="true" posts_per_page="12" transition="masonry" masonry_selector=".grid-item" masonry_animation="slide-up" ]'); ?>
+                    <section class="masonry-layout col-4-layout">
+                        <?php echo do_shortcode('[ajax_load_more repeater="template_2" post_type="publications" order="ASC" pause="false" scroll="true" posts_per_page="12" orderby="meta_value_num" meta_key="publication_date" transition="masonry" masonry_selector=".grid-item" masonry_animation="slide-up" ]'); ?>
                     </section>
                 <!-- </div> -->
             <!-- </div> -->
@@ -28,26 +28,25 @@ get_header(); ?>
 
         <div class="main-modal">
             <div class="container">
-                <section class="publications">
+                <section class="single-publications-content">
                     <div class="row around-xs">
                         <div class="col-xs-12 col-sm-5">
-                            <div class="publications-content">
-                                    
-                            </div>
+                            <div class="image-gallery">
+                                <div class="gallery-slider">
+                                        
+                                </div>
+                            </div>    
                         </div>
+
                         <div class="col-xs-12 col-sm-5">
-                            <div class="publications-image">
+                            <div class="publications-content">
 
                             </div>
                         </div>
-
-                        
-
                     </div>
                 </section>
-            </div>
-
-            <div class="modal-close">CLOSE</div>
+            </div> 
+            <span class="close modal-close"></span>   
         </div>
     </main>
 

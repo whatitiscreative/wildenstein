@@ -148,11 +148,11 @@
         $(document).on('scroll', function(){
             if
           ($(document).scrollTop() > 10){
-              $('.nav-items').addClass('shrink');
+              $('nav, .nav-items').addClass('shrink');
             }
             else
             {
-                $('.nav-items').removeClass('shrink');
+                $('nav, .nav-items').removeClass('shrink');
             }
         });
     

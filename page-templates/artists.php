@@ -25,14 +25,14 @@ get_header(); ?>
                         <ul class="advanced-filter-menu radio-select" data-type="radio" data-parameter="orderby">                    
                             <li>
                                 <div class="radio-wrap">
-                                    <input id="alphabetical" name="radio-group" type="radio" value="title">
+                                    <input id="alphabetical" name="radio-group" type="radio" value="title" checked="checked"/>
                                     <label for="alphabetical">Alphabetical</label>
                                 </div>
                             </li>
 
                             <li>
                                 <div class="radio-wrap">
-                                    <input id="chronological" name="radio-group" type="radio" value="date">
+                                    <input id="chronological" name="radio-group" type="radio" value="date_of_birth">
                                     <label for="chronological">Chronological</label>
                                 </div>
                             </li>
@@ -97,7 +97,7 @@ get_header(); ?>
 
             <section class="masonry-layout">
                 <?php // echo do_shortcode('[ajax_load_more id="artists" post_type="artist" order="ASC" orderby="title" taxonomy="taxonomy" taxonomy_terms="" taxonomy_operator="IN" pause="false" scroll="true" posts_per_page="12"]'); ?>
-                <?php echo do_shortcode('[ajax_load_more id="artists" post_type="artist" order="ASC" taxonomy="taxonomy" taxonomy_terms="" taxonomy_operator="IN" pause="false" scroll="true" posts_per_page="12" transition="masonry" masonry_selector=".grid-item" masonry_animation="slide-up" ]'); ?>
+                <?php echo do_shortcode('[ajax_load_more id="artists" post_type="artist" order="ASC" orderby="title" taxonomy="taxonomy" taxonomy_terms="" taxonomy_operator="IN" pause="false" scroll="true" posts_per_page="12" transition="masonry" masonry_selector=".grid-item" masonry_animation="slide-up" ]'); ?>
             </section>
         </div>
 
@@ -123,7 +123,7 @@ get_header(); ?>
                     </div>
                 </section>
             </div>
-            <div class="modal-close">CLOSE</div>
+            <span class="close modal-close"></span>
         </div>
     </main>
 

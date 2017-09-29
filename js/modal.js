@@ -34,7 +34,7 @@
 
                         if(response.post.post_type == 'artist') {
                             // add the data to the modal
-                            $('.main-modal .artist-bio').html('<h3>' + response.artist_name + '</h3>' + '<label>' + response.nationality + '</label>' + '<label>' + response.date_of_birth + '</label>' + '<label>' + response.date_of_death + '</label>' + '<p class="small">' + response.bio + '</p>');
+                            $('.main-modal .artist-bio').html('<h3>' + response.artist_name + '</h3>' + '<label>' + response.nationality + ': ' + response.date_of_birth +  '-' + response.date_of_death + '</label>' + '<p class="small">' + response.bio + '</p>');
 
                             // destroy previous slider if there was one
                             if($('.slick-initialized').length != 0) {
@@ -58,7 +58,62 @@
                         }
                     
                         if(response.post.post_type == 'publications') {
-                            $('.main-modal .publications .publications-content').html('<div class="publications-modal-img-wrapper"><img src="" class="publications-modal-img" style="background-image: url('+ response.publication_image +')"></div>' + '<h3>' + response.publication_title + '</h3>'+ '<label class="main-label">' + response.publication_subtitle + '</label>' + ', ' + '<label>'  + response.publication_brief + '</label>'+', '+'<label>'  + response.publication_date + '</label>'+ '<label>' + response.no_of_pages +'</label>');
+
+                        // var output ='';
+                        //    output = '<div class="main-modal">';
+                        //      output += '<div class="container">';
+                        //         output += '<section class="single-publications-content">';
+                        //             output += '<div class="row around-xs">';
+                        //                 output += '<div class="col-xs-12 col-sm-5">';
+                        //                     output += '<div class="publications-img">';
+                        //                         output += '<div class="gallery-slider">';
+                        //                             output += '<div class="bg-image" style="background-image: url('+ response.publication_image +')"></div>';
+                        //                         output += '</div>';
+                        //                     output += '</div>';
+                        //                 output += '</div>';
+                                        
+                        //                 output += '<div class="col-xs-12 col-sm-5">';
+                        //                     output += '<div class="publications-content">';
+                        //                         output += '<label class="pub_date">'+ response.publication_date +'</label>';
+                        //                         output += ' <h3>'+response.publication_title +'</h3>';
+                        //                         output += '<label class="pub-border">'+response.publication_subtitle+'</label>';
+                        //                         output += '<label class="pub-font">'+ response.publication_brief+'</label>';
+                        //                         output += '<label class="pub-font"> '+'Published '+' '+ response.publication_date +''+', '+' '+response.no_of_pages+' '+' pages'+' </label>';
+                        //                     output += '</div>';
+                        //                 output += '</div>';
+                        //             output += '</div>';
+                        //         output += '</section>';
+                        //       output += '</div>'
+                        //      output += '<div class="modal-close">CLOSE</div>';
+                        //     output += '</div>';
+                        
+                        
+                        //     $('.main-modal.publications').html(output);
+
+                        console.log('Publications Response:', response);
+                           
+                           //---------Publication Image Slider---------//
+                            // add the data to the modal
+                            $('.main-modal .publications-content').html('<label class="pub_date">'+ response.publication_date +'</label>' + ' <h3>'+response.publication_title +'</h3>' + '<label class="pub-border">'+response.publication_subtitle+'</label>' + '<label class="pub-font">'+ response.publication_brief+'</label>' + '<label class="pub-font"> '+'Published '+' '+ response.publication_date +''+', '+' '+response.no_of_pages+' '+' pages'+' </label>');
+                            // destroy previous slider if there was one
+                            if($('.slick-initialized').length != 0) {
+                                console.log('Destroying Slick Slider');
+                                $('.main-modal .gallery-slider').slick('unslick');
+                                
+                                // remove anything currently in the gallery-slider
+                                $('.main-modal .gallery-slider').html('');
+                            }
+                            // loop through gallery and add each image and data as a slide
+                            response.image_gallery.forEach(function(slide) {
+                                // console.log('Slide Data:', slide);
+                                $('.main-modal .gallery-slider').append('<div><div class="bg-image" style="background-image: url('+ slide.image +')"></div>' + '<label class="main-label">' + slide.image_caption + '</label></div>');
+                            }, this);
+
+                            // reinstantiate the slider
+                            $('.main-modal .gallery-slider').slick({
+                                dots: true
+                            });
+                        
                         }
 
                     } else if(response.type == 'error') {

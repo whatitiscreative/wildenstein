@@ -2,6 +2,25 @@
 // ------------------------------------------------------------------------------------------------
 
 footer {
+    background: $color-black;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include MQ(S) {
+        height: 520px;  
+        background-size: 50% 100%;
+        background-position: bottom right;         
+    }
+
+    .footer-block {
+        @include MQ(S) {
+            height: 520px;
+            display: flex;
+            align-items: center;  
+            padding: 0;   
+        }
+    }
+
     .contact-info {
         display: flex;
         align-items: flex-start;
@@ -24,6 +43,7 @@ footer {
             font-size: 1.2rem;
             color: rgba(255, 255, 255, 0.4);
             line-height: 18px;
+            font-family: $font-primary;
         }
     }
 
@@ -31,62 +51,20 @@ footer {
         margin-bottom: 4.0rem;
     }
 
-    .footer-block {
-        background: $color-black;
-        display: flex;
-        flex-direction: column;            
-        justify-content: center;
-        height: 450px;
-        padding: 0 40px;         
-
-        &:nth-child(2) {
-            background-repeat: no-repeat;
-            background-size: cover;
-            padding: 0 80px 0 60px;
-        }
-    }
-
     .quote {
-        max-width: 400px;
-        margin: 0 auto;
-
         p {
             font-size: 1.9rem;
             line-height: 32px;
             letter-spacing: 0.04rem;
             position: relative;
-
-            &:first-child {
-                margin-bottom: 6.5rem;
-
-                &:before {
-                    content: '“';
-                    font-size: 6.0rem;
-                    position: absolute;
-                    bottom: 80px;
-                    left: -30px;                
-                }
-            }
-
+            margin-bottom: 6.5rem;
+            
             &.source {
                 font-size: 1.3rem;
                 letter-spacing: 0.022rem;
-                color: rgba(255, 255, 255, 0.8)
+                color: rgba(255, 255, 255, 0.8);
+                margin-bottom: 0;
             }
-        }
-    }
-
-
-    @include MQ(S) {
-        display: flex;
-        
-        .footer-block {
-            flex: 1;
-            display: flex;
-            flex-direction: column;            
-            justify-content: center;
-            align-items: center;      
-            height: 520px;      
         }
     }
 }
@@ -95,5 +73,35 @@ footer {
     .menu-item-69 {
         border-top: 2px solid $color-blue-dark;
         border-bottom: 2px solid $color-blue-dark; 
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .footer-block { 
+        padding: 6.0rem;
+
+        &.contact-block {
+            background: $color-black;
+            margin-left: -3.0rem;
+            width: calc(100% - 6.0rem);
+        }
+
+        &.quote-block {
+            padding: 3.0rem;
+        }
+    }
+}
+
+.quote-mark {    
+    position: relative;
+    left: -30px;
+    
+    &:before {
+        content: '“';
+        font-size: 6.0rem;
+        bottom: 0;
+        left: 0;
+        display: inline-block;
+        color: $color-white;
     }
 }
