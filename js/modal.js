@@ -34,7 +34,7 @@
 
                         if(response.post.post_type == 'artist') {
                             // add the data to the modal
-                            $('.main-modal .artist-bio').html('<h3>' + response.artist_name + '</h3>' + '<label>' + response.nationality + '</label>' + '<label>' + response.date_of_birth + '</label>' + '<label>' + response.date_of_death + '</label>' + '<p class="small">' + response.bio + '</p>');
+                            $('.main-modal .artist-bio').html('<h3>' + response.artist_name + '</h3>' + '<label>' + response.nationality + ': ' + response.date_of_birth +  '-' + response.date_of_death + '</label>' + '<p class="small">' + response.bio + '</p>');
 
                             // destroy previous slider if there was one
                             if($('.slick-initialized').length != 0) {

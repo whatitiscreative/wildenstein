@@ -12,7 +12,7 @@
 
 		</div><!-- #main -->
 		
-		<footer id="colophon" class="site-footer" role="contentinfo" style="background-image: url('http://localhost:5132/wp-content/uploads/2017/09/pattern.png')">
+		<footer id="colophon" class="site-footer" role="contentinfo" style="background-image: url('http://wildensteinandco.flywheelsites.com/wp-content/uploads/2017/09/pattern.png')">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-sm-6">
