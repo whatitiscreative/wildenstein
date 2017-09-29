@@ -21,7 +21,9 @@
   "description": "Boilerplate for what.it.is sites",
   "main": "index.js",
   "dependencies": {
-    "gulp": "^3.9.0"
+    "gulp": "^3.9.0",
+    "gulp-sftp": "^0.1.5",
+    "gulp-shell": "^0.6.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
