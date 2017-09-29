@@ -48,11 +48,11 @@ get_header(); ?>
 								<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 									<?php setup_postdata($post); ?>
 										<div class="col-xs-6 col-sm-3">
-											<a href="<?php the_permalink(); ?>">
-												<div class="img-wrap">
-													<?php the_post_thumbnail(); ?>
-												</div>
-												<p><?php the_title(); ?></p>
+											<a href="javascript:void(0);" class="trigger-modal" data-id="<?php echo get_the_id(); ?>" title="<?php the_title(); ?>">
+												<!-- <div class="img-wrap"> -->
+													<?php the_post_thumbnail('alm-cta'); ?>
+												<!-- </div> -->
+												<p><?php the_field('first_name');?> <?php the_field('last_name');?></p>
 											</a>
 										</div>
 								<?php endforeach; ?>
@@ -124,6 +124,34 @@ get_header(); ?>
 				<a class="btn rounded dark block-mobile mobile" href="<?php echo get_field('news_cta')['url'];?>"><?php echo get_field('news_cta')['title'];?></a>
 			</section>
 		</div>
+		  <!-- Modal -->
+
+		  <div class="main-modal">
+            <div class="container">
+                <section class="single-artist-content">
+                    <div class="row around-xs">
+                        <div class="col-xs-12 col-sm-5">
+                            <div class="artist-gallery">
+                                <div class="gallery-slider">
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-5">
+                            <div class="artist-bio">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <span class="close modal-close"></span>
+        </div>
 	</main>
+
+<script type="text/javascript">
+	var ajaxUrl = "<?php echo admin_url('admin-ajax.php')?>";
+</script>
 <?php
 get_footer();
