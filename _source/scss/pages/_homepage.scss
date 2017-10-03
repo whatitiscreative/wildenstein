@@ -9,11 +9,26 @@
         }
     }
 
+    .intro {
+        > .row {
+            padding: 0 10px;
+
+            @include MQ(S) {
+                padding: 0;
+            }
+        }
+    }
+
     .featured-artist-row {
         margin: 5.0rem 0;
 
         @include MQ(S) {
             margin: 10rem 0 0 0;            
+        }
+
+        a {
+            // To Fill the div
+            display: block;
         }
 
         .img-wrap {
@@ -29,6 +44,15 @@
 
         .col-sm-3 {
             padding: 0 15px;
+        }
+
+        // Ipad Portrait Only
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            img {
+                width: 100%;
+                display: block;            
+            }
         }
     }
 }

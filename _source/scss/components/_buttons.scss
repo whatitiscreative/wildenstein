@@ -2,6 +2,8 @@
 // ------------------------------------------------------------------------------------------------
 
 .btn {
+    @include global-transition;
+
     &.rounded {
         padding: 9px 0;
         width: 125px;
@@ -28,6 +30,7 @@
 
         &:hover {
             background: $color-blue-light;
+            @include global-transition;            
         }
     }
 
