@@ -40,7 +40,7 @@ get_header(); ?>
 										<div class="news-slider">
 											<?php while(have_rows('gallery')): the_row();?>
 												<div>
-													<img src="<?php the_sub_field('image');?>">
+													<img class="news-img" src="<?php the_sub_field('image');?>">
 													<label><?php the_sub_field('caption');?></label>
 												</div>
 											<?php endwhile; ?>

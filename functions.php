@@ -716,6 +716,7 @@ function wildenstein_scripts() {
 	wp_enqueue_script('jquery');
 
 	// wp_enqueue_script( 'masonry', get_template_directory_uri() . '/js/masonry.min.js', array(), null, true );
+	wp_enqueue_script( 'ofi', get_template_directory_uri() . '/js/ofi.min.js', array(), null, true );
 	wp_enqueue_script( 'modal', get_template_directory_uri() . '/js/modal.js', array(), null, true );	
 	wp_enqueue_script( 'slick', get_template_directory_uri() . '/js/slick.min.js', array(), null, true );
 	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array(), null, true );

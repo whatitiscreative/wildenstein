@@ -8,7 +8,12 @@
               $('body').removeClass('overflow-hidden');
             }, 1500);
           });
-    
+
+          $(document).ready(function(){
+            var oneImage = document.querySelector('img.news-img');
+            objectFitImages(oneImage);
+          });
+              
             //  Init filter drawer
     
             $(document).ready(function() {
@@ -26,14 +31,13 @@
                         slidesToShow: 1,
                         responsive: [
                             {
-                              breakpoint: 991,
+                              breakpoint: 767,
                               settings: {
                                 slidesToShow: 1,
                                 slidesToScroll: 1,
                                 infinite: true,
                                 variableWidth: false,
                                 centerMode: true,
-                                adaptiveHeight: true
                               }
                             }
                         ]
