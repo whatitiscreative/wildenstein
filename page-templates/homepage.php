@@ -25,14 +25,14 @@ get_header(); ?>
 			<section class="featured-artists">
 				<div class="intro">
 					<div class="row center-xs">
-						<div class="col-xs-12 col-sm-3">
+						<div class="col-xs-12 col-md-3">
 							<aside>
 								<h4><?php the_field('artist_section_headline');?></h4>
 								<a class="btn rounded dark block-mobile desktop" href="<?php echo get_field('section_cta')['url'];?>"><?php echo get_field('section_cta')['title'];?></a>
 							</aside>
 						</div>
 
-						<div class="col-xs-12 col-sm-5">
+						<div class="col-xs-12 col-md-5">
 							<p><?php the_field('artist_section_copy');?></p>
 						</div>
 					</div>
@@ -47,7 +47,7 @@ get_header(); ?>
 							<div class="row center-xs">
 								<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 									<?php setup_postdata($post); ?>
-										<div class="col-xs-6 col-sm-3">
+										<div class="col-xs-6 col-md-3">
 											<a href="javascript:void(0);" class="trigger-modal" data-id="<?php echo get_the_id(); ?>" title="<?php the_title(); ?>">
 												<!-- <div class="img-wrap"> -->
 													<?php the_post_thumbnail('alm-cta'); ?>
@@ -86,7 +86,7 @@ get_header(); ?>
 				?>
 
 				<div class="row">
-					<div class="col-xs-12 col-sm-3">
+					<div class="col-xs-12 col-md-3">
 						<aside>
 							<h4><?php the_field('section_headline');?></h4>
 							<p><?php the_field('section_copy');?></p>
@@ -94,10 +94,10 @@ get_header(); ?>
 						</aside>
 					</div>
 
-					<div class="col-xs-12 col-sm-9">
+					<div class="col-xs-12 col-md-9">
 						<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 							<div class="row">
-								<div class="col-xs-5 col-sm-4">
+								<div class="col-xs-5 col-md-4">
 									<a href="<?php the_permalink(); ?>">
 										<div class="fill">
 											<?php the_post_thumbnail('alm-cta'); ?>
@@ -105,7 +105,7 @@ get_header(); ?>
 									</a>
 								</div>
 
-								<div class="col-xs-7 col-sm-8">
+								<div class="col-xs-7 col-md-8">
 									<div class="news-info">
 										<span class="date"><?php the_date('m.j.Y'); ?></span>
 										<a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
@@ -130,7 +130,7 @@ get_header(); ?>
             <div class="container">
                 <section class="single-artist-content">
                     <div class="row around-xs">
-                        <div class="col-xs-12 col-sm-5">
+                        <div class="col-xs-12 col-md-5">
                             <div class="artist-gallery">
                                 <div class="gallery-slider">
                                     
@@ -138,7 +138,7 @@ get_header(); ?>
                             </div>
                         </div>
 
-                        <div class="col-xs-12 col-sm-5">
+                        <div class="col-xs-12 col-md-5">
                             <div class="artist-bio">
                                 
                             </div>

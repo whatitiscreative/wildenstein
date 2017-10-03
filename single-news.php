@@ -26,7 +26,7 @@ get_header(); ?>
 								<section class="news-content">
 									<div class="container">
 										<div class="row center-xs">
-											<div class="col-xs-12 col-sm-8">
+											<div class="col-xs-12 col-sm-10 col-md-8">
 												<?php the_sub_field('wysiwyg_editor');?>
 											</div>
 										</div>
