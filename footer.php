@@ -14,7 +14,17 @@
 		
 		<footer id="colophon" class="site-footer" role="contentinfo" style="background-image: url('http://wildensteinandco.flywheelsites.com/wp-content/uploads/2017/09/pattern.png')">
 			<div class="container">
-				<div class="row">
+				<div class="row footer-row">
+					<div class="col-xs-12 col-sm-5 col-sm-offset-1">
+						<div class="footer-block quote-block">
+							<div class="quote">
+								<span class="quote-mark"></span>
+								<p><?php the_field('quote', 'option'); ?></p>
+								<p class="source">-<?php the_field('quote_source', 'option'); ?></p>
+							</div>
+						</div>
+					</div>
+
 					<div class="col-xs-12 col-sm-6">
 						<div class="footer-block contact-block">
 							<div class="contact-info">
@@ -27,15 +37,6 @@
 									<p><?php the_field('copyright', 'option'); ?></p>
 									<p>site by what.it.is</p>
 								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-xs-12 col-sm-5 col-sm-offset-1">
-						<div class="footer-block quote-block">
-							<div class="quote">
-								<span class="quote-mark"></span>
-								<p><?php the_field('quote', 'option'); ?></p>
-								<p class="source">-<?php the_field('quote_source', 'option'); ?></p>
 							</div>
 						</div>
 					</div>
