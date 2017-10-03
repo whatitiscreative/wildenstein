@@ -34,7 +34,7 @@
 
                         if(response.post.post_type == 'artist') {
                             // add the data to the modal
-                            $('.main-modal .artist-bio').html('<h3>' + response.artist_name + '</h3>' + '<label>' + response.nationality + ': ' + response.date_of_birth +  '-' + response.date_of_death + '</label>' + '<p class="small">' + response.bio + '</p>');
+                            $('.main-modal .artist-bio').html('<h3>' + response.first_name + ' ' + response.last_name + '</h3>' + '<label>' + response.nationality + '</label>' + '<label>' + response.date_of_birth + '</label>' + '<label>' + response.date_of_death + '</label>' + '<p class="small">' + response.bio + '</p>');
 
                             // destroy previous slider if there was one
                             if($('.slick-initialized').length != 0) {
@@ -94,7 +94,7 @@
                            
                            //---------Publication Image Slider---------//
                             // add the data to the modal
-                            $('.main-modal .publications-content').html('<label class="pub_date">'+ response.publication_date +'</label>' + ' <h3>'+response.publication_title +'</h3>' + '<label class="pub-border">'+response.publication_subtitle+'</label>' + '<label class="pub-font">'+ response.publication_brief+'</label>' + '<label class="pub-font"> '+'Published '+' '+ response.publication_date +''+', '+' '+response.no_of_pages+' '+' pages'+' </label>');
+                            $('.main-modal .publications-content').html('<label class="pub_date">'+ response.publication_date +'</label>' + ' <h3>'+response.publication_title +'</h3>' + '<label class="pub-border">'+response.publication_subtitle+'</label>' + '<p class="pub-font">'+ response.publication_brief+'</p>' + '<label class="pub-font"> '+'Published '+' '+ response.publication_date +''+', '+' '+response.no_of_pages+' '+' pages'+' </label>');
                             // destroy previous slider if there was one
                             if($('.slick-initialized').length != 0) {
                                 console.log('Destroying Slick Slider');

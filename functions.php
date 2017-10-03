@@ -780,7 +780,8 @@ function get_post_ajax() {
 
 				// use the id to get the ACF data
 				// add the rest of the ACF content here
-				'artist_name'				=> get_field('artist_name', $id),	
+				'first_name'				=> get_field('first_name', $id),
+				'last_name'					=> get_field('last_name', $id),	
 				'nationality' 				=> get_field('nationality', $id),
 				'date_of_birth' 			=> get_field('date_of_birth', $id),
 				'date_of_death' 			=> get_field('date_of_death', $id),

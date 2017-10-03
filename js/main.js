@@ -93,25 +93,29 @@
                     count = 0;
                
                // Loop each filter menu
-               $('.advanced-filter-menu').each(function(e){
+               $('.advanced-filter-menu').each(function(e) {
                    var menu = $(this),
                        type = menu.data('type'), // type of filter elements (checkbox/radio/select)
                        parameter = menu.data('parameter'), // category/tag/year
                        value = '',
                        count = 0;
+
+                    // console.log('Menu:', menu);
+                    // console.log('Type:', type);
+                    // console.log('Parameter:', parameter);
                    
                    // Loop each item in the menu      	
-                   if(type === 'checkbox' || type === 'radio'){ // Checkbox or Radio
-                       $('input:checked', menu).each(function(){
+                   if(type === 'checkbox' || type === 'radio') { // Checkbox or Radio
+                       $('input:checked', menu).each(function() {
                            count++;
                            var el = $(this);
                        
                            // Build comma separated string of items
                            if(count > 1){
-                               value += ','+el.val();
-                           }else{
+                               value += ',' + el.val();
+                           } else {
                                value += el.val();
-                           }	
+                           }
                        });
                    }
                
@@ -119,14 +123,13 @@
                        var select = $(this);
                        value += select.val();
                    }
-               
+
                    obj[parameter] = value; // add value(s) to obj
                    
                });
-               
-               console.log(obj);
-               
-               var data = obj;      
+                              
+               var data = obj;
+               console.log('Data:', data);
                $.fn.almFilter('fade', '300', data); // Send data to Ajax Load More
            }
     

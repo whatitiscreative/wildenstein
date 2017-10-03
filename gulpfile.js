@@ -20,7 +20,7 @@ var config = {
 	'username': 'junie',
 	'passwd': 'Generallee1',
 	'host': 'sftp.flywheelsites.com:22/bcslade/wildenstein-co/wp-content/themes/wildenstein/',
-	'root': 'wp-content/themes/wildenstein/'
+	'root': './'
 };
 
 
@@ -45,7 +45,7 @@ gulp.task('styles', function() {
 		.pipe(gulp.dest(paths.css));
 });
 
-gulp.task('ftp-init', shell.task('git ftp init -u ' + config.username + ' -p ' + config.passwd + ' --syncroot ' + config.root + ' sftp://' + config.host));
+gulp.task('ftp-init', shell.task('git ftp init -u ' + config.username + ' -p ' + config.passwd + ' --syncroot ' + config.root + ' sftp://' + config.host + ' --verbose'));
 gulp.task('ftp-push', shell.task('git ftp push -u ' + config.username + ' -p ' + config.passwd + ' --syncroot ' + config.root + ' sftp://' + config.host  + ' --verbose'));
 
 

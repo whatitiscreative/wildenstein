@@ -32,8 +32,8 @@ get_header(); ?>
                                     <div class="publications-content">
                                         <label class="pub_date"><?php the_field('publication_date');?></label>
                                         <h3><?php the_field('publication_title'); ?></h3>
-                                        <label class="pub-border"><?php the_field('publication_subtitle'); ?></label>
-                                        <label class="pub-font"><?php the_field('publication_brief'); ?></label>
+                                        <label><?php the_field('publication_subtitle'); ?></label>
+                                        <p class="pub-font"><?php the_field('publication_brief'); ?></p>
                                         <label class="pub-font"><?php the_field('no_of_pages'); ?>pages</label>
                                     </div>
                                 </div>

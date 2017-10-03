@@ -47,7 +47,7 @@
                 },
                 {
                     "key": "field_59bbe30d33c01",
-                    "label": "Title",
+                    "label": "Image Title",
                     "name": "title",
                     "type": "text",
                     "instructions": "",
@@ -65,46 +65,8 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_59bbe31c33c02",
-                    "label": "Year",
-                    "name": "year",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_59bbe32633c03",
-                    "label": "Type",
-                    "name": "type",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
                     "key": "field_59bbe32c33c04",
-                    "label": "Location",
+                    "label": "Supporting Details",
                     "name": "location",
                     "type": "text",
                     "instructions": "",
@@ -125,11 +87,30 @@
         },
         {
             "key": "field_59bbe1c9ace89",
-            "label": "Artist Name",
-            "name": "artist_name",
+            "label": "First Name",
+            "name": "first_name",
             "type": "text",
             "instructions": "",
-            "required": 0,
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59ce984f7a1c8",
+            "label": "Last Name",
+            "name": "last_name",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -148,7 +129,7 @@
             "name": "nationality",
             "type": "text",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -167,7 +148,7 @@
             "name": "date_of_birth",
             "type": "text",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -201,7 +182,7 @@
         },
         {
             "key": "field_59bbe24face8d",
-            "label": "Bio",
+            "label": "Short Bio",
             "name": "bio",
             "type": "textarea",
             "instructions": "",
@@ -233,8 +214,10 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content"
+    ],
     "active": 1,
     "description": "",
-    "modified": 1506540962
+    "modified": 1506713646
 }
