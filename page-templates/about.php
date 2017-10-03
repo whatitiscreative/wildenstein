@@ -19,12 +19,12 @@ get_header(); ?>
 			<?php while(have_rows('content_blocks')): the_row(); ?>
 				<section class="section-block">
 					<div class="container">
-						<div class="row center-xs middle-xs">
+						<div class="row center-xs">
 							<div class="col-xs-12 col-sm-4"> 
 								<div class="bg-image" style="background-image: url(<?php the_sub_field('section_image'); ?>)"></div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-sm-offset-1"> 
-								<div class="text-block">
+								<div class="text-block about-text-block">
 									<!-- <h3><?//php (the_sub_field('subhead'));?></h3> -->
 									<h3><?php (the_sub_field('headline'));?></h3>
 									<p><?php (the_sub_field('body_copy'));?></p>

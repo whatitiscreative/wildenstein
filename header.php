@@ -51,7 +51,7 @@
 	</div>
 	
 	<nav class="main-naviation">
-		<div class="logo"></div>
+		<a href="<?php echo get_home_url(); ?>" class="logo"></a>
 		<div class="nav-controls">
 			<span class="line line-1"></span>
 			<span class="line line-2"></span>
