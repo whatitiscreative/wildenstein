@@ -35,6 +35,10 @@
     flex-direction: column;
     justify-content: center;
 
+    @include MQ(M) {
+        height: calc(100vh + 65px);
+    }   
+
     .artist-bio {
         padding: 6.0rem 20% 0 0;
 

@@ -21,12 +21,11 @@
     label {
         font-family: $font-secondary;
         //border-bottom: 1px solid $color-border;
-        display: inline;
         padding-bottom: 3.6rem;
         margin-bottom: 3.6rem;
         padding-top: 2rem;
         display: inline-block;
-        
+        font-size: 1.3rem;
     }    
     .layout{    
         text-align: left;
@@ -58,5 +57,11 @@
 .notable-works {
     p {
         font-family: $font-secondary;
+        color: $color-grey;
+    }
+
+    .main-label {
+        color: $color-blue-dark;
+        font-style: normal;
     }
 }
