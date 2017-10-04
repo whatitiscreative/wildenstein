@@ -29,7 +29,7 @@
                         }, 1500);
 
                         if(response.post.post_type == 'notableworks') {
-                            $('.main-modal.notable-works .notable-works-content').html('<div class="nw-modal-img-wrapper"><div class="bg-image" style="background-image: url('+ response.image +')"></div>' + '<div>' + '<label>' + response.artist_name + '</label>' + ', ' + '<label class="main-label">' + response.title + '</label>'+ '<label>' + ', ' + response.supporting_details + '</label>' + '</div>' + '</div>');
+                            $('.main-modal.notable-works .notable-works-content').html('<div class="nw-modal-img-wrapper"><img class="nw-modal-img" src="' + response.image + '">' + '<div>' + '<label>' + response.artist_name + '</label>' + ', ' + '<label class="main-label">' + response.title + '</label>'+ '<label>' + ', ' + response.supporting_details + '</label>' + '</div>' + '</div>');
                         }
 
                         if(response.post.post_type == 'artist') {
