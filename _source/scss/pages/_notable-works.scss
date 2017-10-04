@@ -29,16 +29,20 @@
 }
 
 .nw-modal-img-wrapper {
-    // height: 100vh;
+    @media screen and (max-width: 767px) {
+        padding: 0 20px;        
+    }
 }
 
 .nw-modal-img {
     max-height: 800px;
     width: 100%;
 
-    // @media screen and (max-height: 800px){
-    //     height: 300px;    
-    // }
+    @media screen and (max-height: 800px){
+        width: auto;
+        max-width: 100%;
+        height: 300px;
+    }
 }
 
 // .bg-image {
