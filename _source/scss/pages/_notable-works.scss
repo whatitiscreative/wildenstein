@@ -19,21 +19,16 @@
     label {
         font-family: $font-secondary;
         //border-bottom: 1px solid $color-border;
-        padding-bottom: 3.6rem;
-        margin-bottom: 3.6rem;
-        padding-top: 2rem;
+        // padding-bottom: 3.6rem;
+        // margin-bottom: 3.6rem;
+        // padding-top: 2rem;
         display: inline-block;
         font-size: 1.3rem;
     }    
-    // .layout{    
-    //     text-align: left;
-    // }    
 }
 
 .nw-modal-img-wrapper {
-    // height: calc(100vh - 200px);
-    // margin: 0 auto;
-    // text-align: center;
+    margin-bottom: 1.2rem;
 }
 
 .nw-modal-img {
