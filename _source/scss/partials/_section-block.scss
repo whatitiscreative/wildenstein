@@ -99,6 +99,10 @@
             object-fit: cover;
         }
 
+        &:nth-of-type(1) {
+            padding: 6.0rem 0 4.0rem 0;
+        }
+
         &:nth-child(even) {        
             .text-block {
                 h3 {
