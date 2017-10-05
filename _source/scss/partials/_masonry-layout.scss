@@ -148,6 +148,10 @@
     .notable-works {
         padding: 1.0rem 0 1.7rem 0;
         
+        @media screen and (max-width: 767px) {
+            line-height: 18px;            
+        }
+        
         @include MQ(XS) {
             padding: 1.6rem 0 3.2rem 0;            
         }
