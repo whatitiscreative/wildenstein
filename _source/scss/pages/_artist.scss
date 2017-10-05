@@ -35,6 +35,10 @@
     flex-direction: column;
     justify-content: center;
 
+    @include MQ(M) {
+        height: calc(100vh + 65px);
+    }   
+
     .artist-bio {
         padding: 6.0rem 20% 0 0;
 
@@ -84,6 +88,11 @@
             justify-content: center;
             align-items: flex-end;
             font-size: 1.3rem;
+
+            span {
+                font-family: $font-primary;
+                margin-left: 3px;
+            }
         }
     }
 }

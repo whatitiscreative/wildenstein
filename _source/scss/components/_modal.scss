@@ -2,7 +2,7 @@
 
 .main-modal {
     position: fixed;
-    background: $color-white;
+    background: #F7F7F7;
     width: 100%;
     top: 0;
     left: 0;
@@ -24,14 +24,14 @@
 
     .modal-close {
         position: absolute;
-        top: 30px;
-        right: 30px;
+        top: 17.5px;
+        right: 17.5px;
     }
 
     .close {
         &::before, &::after {
             content: '';
-            background: $color-grey-dark;
+            background: #888286;
           }        
     }
 }

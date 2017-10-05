@@ -24,7 +24,7 @@ get_header(); ?>
 
         <div class="main-modal notable-works">
              
-                <!-- <div class="row center-xs"> --> -->
+                <!-- <div class="row center-xs"> -->
                     <!-- <div class="col-xs-6"> -->
                         <div class="notable-works-content">
                             <div class="nw-modal-img-wrapper">

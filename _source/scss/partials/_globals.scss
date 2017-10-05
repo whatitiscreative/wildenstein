@@ -52,7 +52,7 @@
 // }
 
 .bg-image {
-    background-color: #F2F2F2;
+    background-color: #F7F7F7;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -82,6 +82,9 @@
   background-size: 33px;
   position: absolute;
   bottom: 5vh;
+  left: 0;
+  right: 0;
+  margin: 0 auto;  
 }
 
 .chevron-arrow-right {

@@ -489,11 +489,11 @@ if ( ! class_exists( 'Featured_Content' ) && 'plugins.php' !== $GLOBALS['pagenow
 function artist_post_type() {
 	
 	$labels = array(
-		'name'                => _x( 'Artist', 'Post Type General Name', 'text_domain' ),
-		'singular_name'       => _x( 'Artist', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'           => __( 'Artist', 'text_domain' ),
+		'name'                => _x( 'Artists', 'Post Type General Name', 'text_domain' ),
+		'singular_name'       => _x( 'Artists', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'           => __( 'Artists', 'text_domain' ),
 		'parent_item_colon'   => __( 'Parent Item:', 'text_domain' ),
-		'all_items'           => __( 'All Artist', 'text_domain' ),
+		'all_items'           => __( 'All Artists', 'text_domain' ),
 		'view_item'           => __( 'View Post', 'text_domain' ),
 		'add_new_item'        => __( 'Add New Artist', 'text_domain' ),
 		'add_new'             => __( 'Add New', 'text_domain' ),
@@ -542,9 +542,9 @@ add_action( 'init', 'artist_post_type', 0 );
 function artist_type() {
 	
 	$labels = array(
-		'name'                       => _x( 'Artist Categories', 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( 'Artist Category', 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( 'Artist Categories', 'text_domain' ),
+		'name'                       => _x( 'Artists Categories', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Artists Category', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Artists Categories', 'text_domain' ),
 		'all_items'                  => __( 'All Items', 'text_domain' ),
 		'parent_item'                => __( 'Parent Item', 'text_domain' ),
 		'parent_item_colon'          => __( 'Parent Item:', 'text_domain' ),
@@ -716,6 +716,7 @@ function wildenstein_scripts() {
 	wp_enqueue_script('jquery');
 
 	// wp_enqueue_script( 'masonry', get_template_directory_uri() . '/js/masonry.min.js', array(), null, true );
+	wp_enqueue_script( 'ofi', get_template_directory_uri() . '/js/ofi.min.js', array(), null, true );
 	wp_enqueue_script( 'modal', get_template_directory_uri() . '/js/modal.js', array(), null, true );	
 	wp_enqueue_script( 'slick', get_template_directory_uri() . '/js/slick.min.js', array(), null, true );
 	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array(), null, true );
@@ -795,6 +796,7 @@ function get_post_ajax() {
 					$result['artist_gallery'][$i] = [
 						'image' => get_sub_field('image'),
 						'title' => get_sub_field('title'),
+						'location' => get_sub_field('location'),	
 					];
 					$i++;
 				}

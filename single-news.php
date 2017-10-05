@@ -26,7 +26,7 @@ get_header(); ?>
 								<section class="news-content">
 									<div class="container">
 										<div class="row center-xs">
-											<div class="col-xs-12 col-sm-8">
+											<div class="col-xs-12 col-sm-10 col-md-8">
 												<?php the_sub_field('wysiwyg_editor');?>
 											</div>
 										</div>
@@ -40,7 +40,7 @@ get_header(); ?>
 										<div class="news-slider">
 											<?php while(have_rows('gallery')): the_row();?>
 												<div>
-													<img src="<?php the_sub_field('image');?>">
+													<img class="news-img" src="<?php the_sub_field('image');?>">
 													<label><?php the_sub_field('caption');?></label>
 												</div>
 											<?php endwhile; ?>

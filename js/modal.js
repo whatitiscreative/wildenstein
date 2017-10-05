@@ -29,12 +29,12 @@
                         }, 1500);
 
                         if(response.post.post_type == 'notableworks') {
-                            $('.main-modal.notable-works .notable-works-content').html('<div class="nw-modal-img-wrapper"><img class="nw-modal-img" src="' + response.image + '"></div>' + '<label>' + response.artist_name + '</label>' + ', ' + '<label class="main-label">' + response.title + '</label>'+ '<label>' + ', ' + response.supporting_details + '</label>');
+                            $('.main-modal.notable-works .notable-works-content').html('<div class="nw-modal-img-wrapper"><img class="nw-modal-img" src="' + response.image + '">' + '<div>' + '<label>' + response.artist_name + '</label>' + ', ' + '<label class="main-label">' + response.title + '</label>'+ '<label>' + ', ' + response.supporting_details + '</label>' + '</div>' + '</div>');
                         }
 
                         if(response.post.post_type == 'artist') {
                             // add the data to the modal
-                            $('.main-modal .artist-bio').html('<h3>' + response.first_name + ' ' + response.last_name + '</h3>' + '<label>' + response.nationality + '</label>' + '<label>' + response.date_of_birth + '</label>' + '<label>' + response.date_of_death + '</label>' + '<p class="small">' + response.bio + '</p>');
+                            $('.main-modal .artist-bio').html('<h3>' + response.first_name + ' ' + response.last_name + '</h3>'  + '<label>' + response.nationality + ': ' + response.date_of_birth +  '-' + response.date_of_death + '</label>' + '<p class="small">' + response.bio + '</p>');
 
                             // destroy previous slider if there was one
                             if($('.slick-initialized').length != 0) {
@@ -48,7 +48,7 @@
                             // loop through gallery and add each image and data as a slide
                             response.artist_gallery.forEach(function(slide) {
                                 // console.log('Slide Data:', slide);
-                                $('.main-modal .gallery-slider').append('<div><div class="bg-image" style="background-image: url('+ slide.image +')"></div>' + '<label class="main-label">' + slide.title + '</label></div>');
+                                $('.main-modal .gallery-slider').append('<div><div class="bg-image" style="background-image: url('+ slide.image +')"></div>' + '<label class="main-label">' + slide.title + ', ' + '<span>' + slide.location + '</span>' + '</label></div>');
                             }, this);
 
                             // reinstantiate the slider
@@ -106,7 +106,7 @@
                             // loop through gallery and add each image and data as a slide
                             response.image_gallery.forEach(function(slide) {
                                 // console.log('Slide Data:', slide);
-                                $('.main-modal .gallery-slider').append('<div><div class="bg-image" style="background-image: url('+ slide.image +')"></div>' + '<label class="main-label">' + slide.image_caption + '</label></div>');
+                                $('.main-modal .gallery-slider').append('<div><div class="bg-image" style="background-image: url('+ slide.image +')"></div>' + '<label class="main-label">' + slide.title + ',' + slide.location + '</label></div>');
                             }, this);
 
                             // reinstantiate the slider
