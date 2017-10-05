@@ -21,6 +21,18 @@
 
     .featured-artist-row {
         margin: 5.0rem 0;
+        
+        @media screen and (max-width: 767px) {
+            .row {
+                // margin-left: -0.9rem;
+                // margin-right: -0.9rem;
+
+                .col-xs-6 {
+                    padding-right: 0.9rem;
+                    padding-left: 0.9rem;                
+                }
+            }
+        }
 
         @include MQ(S) {
             margin: 10rem 0 0 0;            
@@ -39,8 +51,8 @@
             font-size: 1.2rem;
             font-family: $font-secondary;
             line-height: 15px;
-            margin: 7px auto 12px auto;
-
+            margin: 3px auto 10px auto;
+            
             @include MQ(XS) {
                 font-size: 1.3rem;
                 line-height: 26px;
@@ -60,5 +72,27 @@
                 display: block;            
             }
         }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .home {
+        .latest-news {
+            padding: 4.5rem 0 6.0rem 0;
+
+            .row {
+                margin-bottom: 1.5rem;
+            }
+
+            .news-info {
+                padding: 0 0 0 1.0rem;
+                position: relative;
+                top: -5px;            
+            }
+
+            aside {
+                padding-left: 2.0rem;
+            }
+        }    
     }
 }
