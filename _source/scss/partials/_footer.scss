@@ -12,11 +12,11 @@ footer {
         background-position: bottom right;         
     }
 
-    .footer-row {
-        @include MQ(XS) {
-            flex-direction: row-reverse;
-        }
-    }
+    // .footer-row {
+    //     @include MQ(XS) {
+    //         flex-direction: row-reverse;
+    //     }
+    // }
 
     .footer-block {
         @include MQ(S) {

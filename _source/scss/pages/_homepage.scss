@@ -36,10 +36,16 @@
         }
 
         p {
-            font-size: 1.3rem;
-            line-height: 26px;
-            margin: 1.2rem 0;
+            font-size: 1.2rem;
             font-family: $font-secondary;
+            line-height: 15px;
+            margin: 7px auto 12px auto;
+
+            @include MQ(XS) {
+                font-size: 1.3rem;
+                line-height: 26px;
+                margin: 1.2rem 0;    
+            }
         }
 
         .col-sm-3 {
