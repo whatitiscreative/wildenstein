@@ -120,12 +120,9 @@
 
     p {
         margin-bottom: 1.5em;
+        line-height: 29px;
+        font-size: 1.8rem;
         display: inline-block;
-
-        @include MQ(XS) {
-            line-height: 29px;
-            font-size: 1.8rem;    
-        }
       }
 
     h3 {

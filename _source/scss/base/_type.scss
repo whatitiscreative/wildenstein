@@ -83,6 +83,7 @@ p {
 }
 
 label {
+  cursor: default;
   &.main-label {
     font-family: $font-secondary;
     font-style: italic;

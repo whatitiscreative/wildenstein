@@ -7,8 +7,11 @@
 // }
 
 .masonry-layout {
-    margin-top: 6.0rem;
     position: relative;
+    
+    @include MQ(XS) {
+        margin-top: 6.0rem;        
+    }
 
     @include MQ(S) {
         min-height: 700px;        
@@ -56,7 +59,7 @@
         }    
     }
 
-    &.notable-works {
+    &.notable-works {        
         a {
 
             &::before {
@@ -143,8 +146,8 @@
     }
     
     .notable-works {
-        padding: 1.6rem 0 3.2rem 0;
-
+        padding: 1.0rem 0 1.7rem 0;
+        
         p {
             font-size: 1.3rem;
             //line-height: 30px;
@@ -219,6 +222,42 @@
             &:nth-child(3n+3) {
                 margin: 0 17.5px 17.5px 17.5px;
             }    
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .filter-results {
+        margin-bottom: 6.0rem;                
+    }
+
+    .masonry-layout {
+        margin-left: -10px;
+        margin-right: -10px;
+        
+        .grid-item {
+            margin: 0 10px 10px 10px;
+            width: calc(50% - 20px);
+            float: left;
+            position: relative;    
+    
+            &:nth-child(3n+3) {
+                margin: 0 0 10px 10px;
+            }
+        }
+    
+        &.col-4-layout {
+            .grid-item {
+                width: calc(50% - 20px);
+        
+                &:nth-child(4n+4) {
+                    margin: 0 0 10px 10px;
+                }
+    
+                &:nth-child(3n+3) {
+                    margin: 0 10px 10px 10px;
+                }    
+            }
         }
     }
 }

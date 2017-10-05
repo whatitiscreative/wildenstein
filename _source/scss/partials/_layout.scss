@@ -17,15 +17,23 @@
 
 main {
     header {
-            padding-top: 15rem;
             text-align: center;
-            padding-bottom: 4.0rem;
             max-width: 550px;
             margin: 0 auto;
+            padding: 6.4rem 0;
+
+            @include MQ(XS) {                
+                padding-top: 15rem;
+                padding-bottom: 4.0rem;
+            }
 
             h2 {
-                margin-bottom: 4.0rem;
+                margin-bottom: 1.8rem;
                 line-height: 4.8rem;
+
+                @include MQ(XS) {
+                    margin-bottom: 4.0rem;                    
+                }
             }
 
             p {
