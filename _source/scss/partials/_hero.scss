@@ -78,9 +78,16 @@
 
     &.framed {
         margin: 0 30px 30px 30px;
-        max-width: calc(100% - 60px);   
-        height: calc(100vh - 94px);
-        padding-top: 64px;
+        max-width: calc(100% - 60px);
+        height: calc(100vh - 125px);
+        margin-top: 94px;
+
+        // @include MQ(XS) {
+        //     margin: 0 30px 30px 30px;
+        //     max-width: calc(100% - 60px);   
+        //     height: calc(100vh - 94px);
+        //     padding-top: 64px;    
+        // }
     
         @include MQ(S) {
             margin: 0 40px 40px 40px;

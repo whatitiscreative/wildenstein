@@ -10,7 +10,7 @@
           });
 
           $(document).ready(function(){
-            var oneImage = document.querySelector('img.news-img');
+            var oneImage = document.querySelector('img.news-img, img.history-img');
             objectFitImages(oneImage);
           });
               

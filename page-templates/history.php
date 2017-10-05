@@ -20,11 +20,11 @@ get_header(); ?>
             <section class="section-block">
                 <div class="container">
                     <div class="row center-xs">
-                        <div class="col-xs-12 col-sm-6 col-md-4"> 
-                            <img src="<?php the_sub_field('section_image'); ?>">
+                        <div class="col-xs-6 col-sm-6 col-md-4"> 
+                            <img class="history-img" src="<?php the_sub_field('section_image'); ?>">
                         </div>
-                        <div class="col-xs-12 col-sm-5 col-sm-offset-1 col-md-4 col-md-offset-1"> 
-                            <div class="text-block">
+                        <div class="col-xs-6 col-sm-5 col-sm-offset-1 col-md-4 col-md-offset-1"> 
+                            <div class="text-block history">
                                 <span class="date"><?php (the_sub_field('year'));?></span>
                                 <h3><?php (the_sub_field('headline'));?></h3>
                                 <p><?php (the_sub_field('body_copy'));?></p>
