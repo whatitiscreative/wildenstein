@@ -144,15 +144,18 @@
             margin-bottom: 0.5rem;
         }
     }
-    
+
     .notable-works {
         padding: 1.0rem 0 1.7rem 0;
+        
+        @include MQ(XS) {
+            padding: 1.6rem 0 3.2rem 0;            
+        }
         
         p {
             font-size: 1.3rem;
             //line-height: 30px;
             letter-spacing: 0.04rem;
-            color:$color-grey-dark;
         }
 
         label {
@@ -160,9 +163,7 @@
             //line-height: 1.9rem;
             letter-spacing: 0.05rem;
             font-family: $font-secondary;
-            color: $color-grey;
         }
-        
     }
 
     .publications {
