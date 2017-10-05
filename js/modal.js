@@ -145,7 +145,7 @@
     });
 
     $('.modal-close').on('click', function() {
-        $('.main-modal').fadeOut(800);
+        $('.main-modal').fadeOut(1000);
     });
          
 })(jQuery);
