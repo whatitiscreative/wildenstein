@@ -55,7 +55,10 @@
                 "class": "",
                 "id": ""
             },
-            "choices": [],
+            "choices": {
+                "Overlay": "Overlay",
+                "No Overlay": "No Overlay"
+            },
             "allow_custom": 0,
             "save_custom": 0,
             "default_value": [],
@@ -204,5 +207,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1506698837
+    "modified": 1507163612
 }

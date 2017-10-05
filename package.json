@@ -21,6 +21,7 @@
   "description": "Boilerplate for what.it.is sites",
   "main": "index.js",
   "dependencies": {
+    "git-ftp": "0.0.0",
     "gulp": "^3.9.0",
     "gulp-sftp": "^0.1.5",
     "gulp-shell": "^0.6.3"
