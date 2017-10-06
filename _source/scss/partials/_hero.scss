@@ -27,11 +27,23 @@
 
     h2 {
         max-width: 700px;
+        padding: 0 20px;
+        line-height: 40px;
+
+        @include MQ(XS) {
+            padding: 0;
+            line-height: inherit;
+        }
     }
 
     .date {
         font-size: 1.5rem;
         color: rgba(255,255,255,0.8);
+        margin-bottom: 15px;
+
+        @include MQ(XS) {
+            margin-bottom: 0;
+        }
     }
 
     label {
