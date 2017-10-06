@@ -11,7 +11,7 @@ get_header(); ?>
     <main>
         <div class="container">
             <header>
-                <h2><?php the_field('page_title'); ?></h2>
+                <h2 class="with-margin"><?php the_field('page_title'); ?></h2>
                 <p><?php the_field('publications_overview_text');?> </p>
             </header>
            

@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-    <main>
+    <main class="with-padding">
         <div class="container">
             <header>
                 <h2><?php the_title();?></h2>

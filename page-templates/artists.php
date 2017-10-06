@@ -9,10 +9,10 @@
 
 get_header(); ?>
 
-    <main>
+    <main class="with-padding">
         <div class="container">
             <header>
-                <h2>Artists</h2>
+                <h2 class="with-margin">Artists</h2>
                 <p>Lorem ipsum dolor sit amet, ei erant nemore vulputate vim. Singulis definiebas disputationi usu ei, hinc iusto electram ne duo. Id vel tollit legimus nostrum, at vivendo atomorum consequat vis. </p>
             </header>
 

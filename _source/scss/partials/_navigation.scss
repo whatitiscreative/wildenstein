@@ -186,3 +186,14 @@ nav {
     display: none
   }
 }
+
+// News Specific
+
+.single-news {
+  .menu-item-69 {
+    @include MQ(M) {
+      border-top: 2px solid $color-blue-dark;
+      border-bottom: 2px solid $color-blue-dark; 
+    }
+  }
+}

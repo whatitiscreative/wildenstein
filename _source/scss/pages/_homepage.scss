@@ -74,25 +74,3 @@
         }
     }
 }
-
-@media screen and (max-width: 767px) {
-    .home {
-        .latest-news {
-            padding: 4.5rem 0 6.0rem 0;
-
-            .row {
-                margin-bottom: 1.5rem;
-            }
-
-            .news-info {
-                padding: 0 0 0 1.0rem;
-                position: relative;
-                top: -5px;            
-            }
-
-            aside {
-                padding-left: 2.0rem;
-            }
-        }    
-    }
-}
