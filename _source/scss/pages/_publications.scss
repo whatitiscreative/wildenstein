@@ -58,13 +58,14 @@
 
     .gallery-slider {
         height: 670px;    
-
-        @media screen and (max-width: 767px) {
-            height: 540px;            
-        }
         
         @media screen and (max-height: 800px){
             height: 570px;    
+        }
+
+
+        @media screen and (max-width: 767px) {
+            height: 540px;            
         }
         
         .bg-image {
