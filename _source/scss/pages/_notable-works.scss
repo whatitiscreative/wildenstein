@@ -23,7 +23,8 @@
         // padding-bottom: 3.6rem;
         // margin-bottom: 3.6rem;
         // padding-top: 2rem;
-        display: inline-block;
+        // display: inline-block;
+        display: inline;
         font-size: 1.3rem;
     }    
 }
@@ -35,8 +36,12 @@
 }
 
 .nw-modal-img {
-    max-height: 800px;
+    max-height: 500px;
     width: 100%;
+
+    @include MQ(XS) {
+        max-height: 800px;        
+    }
 
     // @media screen and (max-height: 800px){
     //     width: auto;

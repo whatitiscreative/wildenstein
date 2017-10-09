@@ -23,8 +23,14 @@
 
     .modal-close {
         position: absolute;
-        top: 17.5px;
-        right: 17.5px;
+        top: 20px;
+        right: 24px;
+
+        @include MQ(XS) {
+            top: 17.5px;
+            right: 17.5px;
+    
+        }
     }
 
     .close {
