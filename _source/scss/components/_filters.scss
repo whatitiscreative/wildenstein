@@ -30,9 +30,16 @@
 }
 
 .filter-inner {	
-	display: flex;
 	padding: 4.0rem 0 2.0rem 0;
 	border-bottom: 1px solid $color-border;
+
+	@media screen and (max-width: 767px) {
+		column-count: 2;
+	}
+
+	@include MQ(XS) {
+		display: flex;		
+	}
 
 	ul {
 		position: relative;
@@ -48,7 +55,12 @@
 			text-transform: uppercase;
 			letter-spacing: 1px;
 			line-height: 26px;
-			font-size: 1.4rem;
+			font-size: 1.2rem;
+
+			@include MQ(XS) {
+				font-size: 1.4rem;
+				
+			}
 		}
 
 		// &.radio-select {
