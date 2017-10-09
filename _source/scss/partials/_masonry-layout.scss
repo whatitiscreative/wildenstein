@@ -115,26 +115,42 @@
 
     .artist-info,
     .publications-info {
-        padding: 1.6rem 0 2.2rem 0;  
+        padding: 1.0rem 0;        
+        
+        @include MQ(XS) {
+            padding: 1.6rem 0 2.0rem 0;            
+        }
 
         p {
-            line-height: 30px;   
             letter-spacing: 0.04rem;
             font-family: $font-secondary;
+
+            @include MQ(XS) {
+                line-height: 30px;                   
+            }
         }
         
         label {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             line-height: 1.9rem;
-            letter-spacing: 0.05rem;
             font-family: $font-secondary;
             color: $color-grey;
+
+            @include MQ(XS) {
+                font-size: 1.3rem;
+                letter-spacing: 0.05rem;    
+            }
         }
     }
 
     .artist-info {
         p {
-            font-size: 2.4rem;
+            font-size: 1.6rem;
+
+            @include MQ(XS) {
+                font-size: 2.4rem;
+                
+            }
         }
     }
 
