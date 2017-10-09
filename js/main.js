@@ -1,82 +1,116 @@
 // Main Scripts
 
 (function($) {
+
+    // Path to force horizontal ordering in masonry
+    //https://github.com/desandro/masonry/issues/873
+
+    Masonry.prototype._getItemLayoutPosition = function( item ) {
+        item.getSize();
+        // how many columns does this brick span
+        var remainder = item.size.outerWidth % this.columnWidth;
+        var mathMethod = remainder && remainder < 1 ? 'round' : 'ceil';
+        // round if off by 1 pixel, otherwise use ceil
+        var colSpan = Math[ mathMethod ]( item.size.outerWidth / this.columnWidth );
+        colSpan = Math.min( colSpan, this.cols );
+    
+        var colGroup = this._getColGroup( colSpan );
+        // get the minimum Y value from the columns
+    //    var minimumY = Math.min.apply( Math, colGroup );
+    //    var shortColIndex = colGroup.indexOf( minimumY );
+        var shortColIndex = this.items.indexOf(item) % this.cols;
+        var minimumY = colGroup[shortColIndex];
+    
+        // position the brick
+        var position = {
+          x: this.columnWidth * shortColIndex,
+          y: minimumY
+        };
+    
+        // apply setHeight to necessary columns
+        var setHeight = minimumY + item.size.outerHeight;
+        var setSpan = this.cols + 1 - colGroup.length;
+        for ( var i = 0; i < setSpan; i++ ) {
+          this.colYs[ shortColIndex + i ] = setHeight;
+        }
+    
+        return position;
+      };
     
         $(window).load(function() {
             window.setTimeout(function() {
-              $('.loading').fadeOut(800);
-              $('body').removeClass('overflow-hidden');
+                $('.loading').fadeOut(800);
+                $('body').removeClass('overflow-hidden');
             }, 1500);
-          });
+        });
 
-          $(document).ready(function(){
-            var oneImage = document.querySelector('img.news-img, img.history-img');
-            objectFitImages(oneImage);
-          });
+        $(document).ready(function(){
+        var oneImage = document.querySelector('img.news-img, img.history-img');
+        objectFitImages(oneImage);
+        });
               
-            //  Init filter drawer
+        //  Init filter drawer
+
+        $(document).ready(function() {
+            $('.trigger-drawer').on('click', function(){
+                $('.filter-drawer').slideToggle(300);
+                $(this).toggleClass('active');
+            })
+        });
     
-            $(document).ready(function() {
-                $('.trigger-drawer').on('click', function(){
-                    $('.filter-drawer').slideToggle(300);
-                    $(this).toggleClass('active');
-                })
-            });
-    
-            $(document).ready(function() {
-                if($('.news-slider')) {
-                    $('.news-slider').slick({
-                        variableWidth: true,
-                        infinite: false,
-                        slidesToShow: 1,
-                        responsive: [
-                            {
-                              breakpoint: 767,
-                              settings: {
-                                slidesToShow: 1,
-                                slidesToScroll: 1,
-                                infinite: true,
-                                variableWidth: false,
-                                centerMode: true,
-                              }
+        $(document).ready(function() {
+            if($('.news-slider')) {
+                $('.news-slider').slick({
+                    variableWidth: true,
+                    infinite: false,
+                    slidesToShow: 1,
+                    responsive: [
+                        {
+                            breakpoint: 767,
+                            settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            variableWidth: false,
+                            centerMode: true,
                             }
-                        ]
-                        
-                    });
-                }
-            });
+                        }
+                    ]
+                    
+                });
+            }
+        });
 
-            $(document).ready(function() {
-                $('.trigger-contact-modal').on('click', function(){
-                    $('.contact-modal').addClass('active');
-                })
+        $(document).ready(function() {
+            $('.trigger-contact-modal').on('click', function(){
+                $('.contact-modal').addClass('active');
+            })
 
-                $('.close').on('click', function(){
-                    $('.contact-modal').removeClass('active');
-                })
-            });
-    
-    
-            $(document).ready(function() {
-                $( ".nav-items" ).prepend( $('.logo, .nav-controls') );
-                
-                $('.nav-controls').on('click', function(){
-                    $(this).toggleClass('active');
-                    $('.nav-items').toggleClass('active');
-                    $('.nav-items li').fadeToggle(400);                    
-                })
-            });      
+            $('.close').on('click', function(){
+                $('.contact-modal').removeClass('active');
+            })
+        });
+
+
+        $(document).ready(function() {
+            $( ".nav-items" ).prepend( $('.logo, .nav-controls') );
             
-            $(document).ready(function() {
-                $('a[rel="relativeanchor"]').click(function(){
-                    $('html, body').animate({
-                        scrollTop: $( $.attr(this, 'href') ).offset().top - 110
-                    }, 500);
-                    return false;
-                }); 
-            });
-    
+            $('.nav-controls').on('click', function(){
+                $(this).toggleClass('active');
+                $('.nav-items').toggleClass('active');
+                $('.nav-items li').fadeToggle(400);                    
+            })
+        });      
         
+        $(document).ready(function() {
+            $('a[rel="relativeanchor"]').click(function(){
+                $('html, body').animate({
+                    scrollTop: $( $.attr(this, 'href') ).offset().top - 110
+                }, 500);
+                return false;
+            }); 
+        });
+    
         /*
         * alm_adv_filter()
         * https://connekthq.com/plugins/ajax-load-more/examples/filtering/advanced-filtering/
@@ -86,6 +120,14 @@
         var alm_is_animating = false;
         
            function alm_adv_filter(){
+
+            // $( document ).ready(function() {
+            //     $('.masonry-layout').masonry({
+            //         itemSelector: '.grid-item',
+            //         horizontalOrder: true                
+            //       });
+            // });
+
            
                if(alm_is_animating){
                    return false; // Exit if filtering is still active 
@@ -135,7 +177,7 @@
                var data = obj;
                console.log('Data:', data);
                $.fn.almFilter('fade', '300', data); // Send data to Ajax Load More
-           }
+       }
     
             // Update Filters everytime there is an update to the inputs    
            $('input').on('change', alm_adv_filter);     
