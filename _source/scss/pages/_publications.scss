@@ -14,9 +14,11 @@
     
     .publications-content{
         padding: 25px 0 50px 0;
+        border-top: 1px solid $color-border;
         
         @include MQ(XS) {
-            padding: 6.0rem 20% 0 0;            
+            padding: 6.0rem 20% 0 0;     
+            border-top: 0;       
         }
         
         h3 {
@@ -27,7 +29,11 @@
             font-family: $font-secondary;
             //border-bottom: 1px solid $color-border;
             //padding-bottom: 3.6rem;
-            padding-bottom:3.0rem;
+            padding-bottom: 3.0rem;
+            
+            @media screen and (max-width: 767px) {
+                width: 100%;
+            }
         }    
 
          .pub-border {

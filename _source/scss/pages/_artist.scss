@@ -13,9 +13,11 @@
 
     .artist-bio {
         padding: 25px 0 50px 0;
+        border-top: 1px solid $color-border;        
         
         @include MQ(XS) {
-            padding: 6.0rem 20% 0 0;            
+            padding: 6.0rem 20% 0 0;
+            border-top: 0;                   
         }
 
         h3 {
