@@ -106,7 +106,7 @@
                             // loop through gallery and add each image and data as a slide
                             response.image_gallery.forEach(function(slide) {
                                 // console.log('Slide Data:', slide);
-                                $('.main-modal .gallery-slider').append('<div><div class="bg-image" style="background-image: url('+ slide.image +')"></div>' + '<label class="main-label">' + slide.title + ',' + slide.location + '</label></div>');
+                                $('.main-modal .gallery-slider').append('<div><div class="bg-image" style="background-image: url('+ slide.image +')"></div>' + '<label class="main-label">' + slide.image_caption + '</label></div>');
                             }, this);
 
                             // reinstantiate the slider
