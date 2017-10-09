@@ -13,8 +13,8 @@
     }
     
     .publications-content{
-        padding: 6.0rem 20% 0 0;
-
+        padding: 25px 0 50px 0;
+        
         @include MQ(XS) {
             padding: 6.0rem 20% 0 0;            
         }
