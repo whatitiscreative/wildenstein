@@ -65,13 +65,13 @@
     .gallery-slider {
         height: 670px;    
 
-        // @media screen and (max-width: 767px) {
-        //     height: 540px;            
-        // }
-        
-        @media screen and (max-height: 800px){
-            height: 540px;    
+        @media screen and (max-width: 767px) {
+            height: auto;            
         }
+        
+        // @media screen and (max-height: 800px){
+        //     height: 540px;    
+        // }
         
         .bg-image {
             height: 570px;
@@ -86,11 +86,17 @@
         }
         
         label {
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
+            height: auto;
+            display: inline-block;
             font-size: 1.3rem;
+            padding: 30px 40px 20px 40px;
+
+            @include MQ(XS) {
+                height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;    
+            }
 
             span {
                 font-family: $font-primary;
