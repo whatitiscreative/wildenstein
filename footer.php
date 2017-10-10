@@ -12,7 +12,7 @@
 
 		</div><!-- #main -->
 		
-		<footer id="colophon" class="site-footer" role="contentinfo" style="background-image: url('http://wildensteinandco.flywheelsites.com/wp-content/uploads/2017/09/pattern.png')">
+		<footer id="colophon" class="site-footer" role="contentinfo" style="background-image: url('http://wildensteinandco.flywheelsites.com/wp-content/uploads/2017/10/footer-pattern.png')">
 			<div class="container">
 				<div class="row footer-row">
 
@@ -21,12 +21,12 @@
 							<div class="contact-info">
 								<div class="logo-icon bg-image"></div>
 								<p><?php the_field('street', 'option'); ?></p>
-								<p><?php the_field('city', 'option'); ?><?php the_field('state', 'option'); ?><?php the_field('zip', 'option'); ?></p>
+								<p><?php the_field('city', 'option'); ?>,&nbsp;<?php the_field('state', 'option'); ?>&nbsp;<?php the_field('zip', 'option'); ?></p>
 								<p><?php the_field('phone', 'option'); ?></p>
 								<p class="email"><a href="mailto:info@wildenstein.com"><?php the_field('email', 'option'); ?></a></p>
 								<div class="legal">
 									<p><?php the_field('copyright', 'option'); ?></p>
-									<p>site by what.it.is</p>
+									<p>site by <a target="_blank" href="http://what.it.is/">what.it.is</a></p>
 								</div>
 							</div>
 						</div>
@@ -37,7 +37,7 @@
 							<div class="quote">
 								<span class="quote-mark"></span>
 								<p><?php the_field('quote', 'option'); ?></p>
-								<p class="source">-<?php the_field('quote_source', 'option'); ?></p>
+								<p class="source">-&nbsp;<?php the_field('quote_source', 'option'); ?></p>
 							</div>
 						</div>
 					</div>
