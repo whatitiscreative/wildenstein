@@ -116,7 +116,7 @@ get_header(); ?>
                             </div>
                         </div>
 
-                        <div class="col-xs-12 col-sm-5">
+                        <div class="col-xs-12 col-sm-5 padding-wrap">
                             <div class="artist-bio">
                                 
                             </div>
