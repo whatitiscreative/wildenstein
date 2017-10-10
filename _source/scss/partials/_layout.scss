@@ -1,6 +1,12 @@
 // Basic Layout
 // ------------------------------------------------------------------------------------------------
 
+body {
+    // This class will be toggled anytime there is an overlay (ie modals / drawers)- prevents body background scrolling inside modal
+    &.fixed {
+        overflow: hidden;
+    }
+}
 // Container
 
 .container {

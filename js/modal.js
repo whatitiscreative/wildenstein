@@ -140,12 +140,13 @@
 
             // show loader
             $('.loading').fadeIn(100);
-            $('body').addClass('overflow-hidden');
+            $('body').addClass('fixed');
         });
     });
 
     $('.modal-close').on('click', function() {
         $('.main-modal').fadeOut(1000);
+        $('body').removeClass('fixed');        
     });
          
 })(jQuery);

@@ -40,7 +40,7 @@
         $(window).load(function() {
             window.setTimeout(function() {
                 $('.loading').fadeOut(800);
-                $('body').removeClass('overflow-hidden');
+                $('body').removeClass('fixed');
             }, 1500);
         });
 
@@ -84,10 +84,12 @@
         $(document).ready(function() {
             $('.trigger-contact-modal').on('click', function(){
                 $('.contact-modal').addClass('active');
+                $('body').addClass('fixed');
             })
 
             $('.close').on('click', function(){
                 $('.contact-modal').removeClass('active');
+                $('body').removeClass('fixed');                
             })
         });
 
@@ -98,7 +100,8 @@
             $('.nav-controls').on('click', function(){
                 $(this).toggleClass('active');
                 $('.nav-items').toggleClass('active');
-                $('.nav-items li').fadeToggle(400);                    
+                $('.nav-items li').fadeToggle(400); 
+                $('body').toggleClass('fixed');                                
             })
         });      
         
