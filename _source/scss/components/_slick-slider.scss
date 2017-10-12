@@ -109,7 +109,7 @@
 
 .slick-dots {
     position: absolute;
-    bottom: 62px;
+    bottom: 40px;        
     display: block;
     width: 100%;
     padding: 0;
@@ -118,7 +118,11 @@
     text-align: center;
 
     @include MQ(XS) {
-        bottom: 65px;        
+        bottom: 35px;        
+    }
+
+    @include MQ(S) {
+        bottom: 25px;        
     }
 
     li {

@@ -104,6 +104,10 @@
                 $('body').toggleClass('fixed');                                
             })
         });      
+
+        $(document).ready(function() {
+            $( ".slick-slide .main-label" ).append( $('.slick-dots') );
+        });          
         
         $(document).ready(function() {
             $('a[rel="relativeanchor"]').click(function(){

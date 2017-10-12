@@ -148,5 +148,6 @@
         $('.main-modal').fadeOut(1000);
         $('body').removeClass('fixed');        
     });
+
          
 })(jQuery);
