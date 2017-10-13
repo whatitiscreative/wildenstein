@@ -26,11 +26,11 @@ get_header(); ?>
 		<div id="anchorAbout"></div>
 		<?php if(have_rows('content_blocks')):?>
 			<?php while(have_rows('content_blocks')): the_row(); ?>
-				<section class="section-block">
+				<section class="section-block about-block">
 					<div class="container">
 						<div class="row center-xs">
 							<div class="col-xs-6 col-sm-6 col-md-4"> 
-								<div class="bg-image" style="background-image: url(<?php the_sub_field('section_image'); ?>)"></div>
+								<img class="object-fit" src="<?php the_sub_field('section_image'); ?>">
 							</div>
 							<div class="col-xs-6 col-sm-5 col-sm-offset-1 col-md-4 col-md-offset-1"> 
 								<div class="text-block about-text-block">

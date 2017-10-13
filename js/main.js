@@ -45,7 +45,7 @@
         });
 
         $(document).ready(function(){
-        var oneImage = document.querySelector('img.news-img, img.history-img');
+        var oneImage = document.querySelector('img.news-img, img.object-fit');
         objectFitImages(oneImage);
         });
               
@@ -104,10 +104,6 @@
                 $('body').toggleClass('fixed');                                
             })
         });      
-
-        $(document).ready(function() {
-            $( ".slick-slide .main-label" ).append( $('.slick-dots') );
-        });          
         
         $(document).ready(function() {
             $('a[rel="relativeanchor"]').click(function(){
