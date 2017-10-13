@@ -9,11 +9,20 @@
 
 get_header(); ?>
 <main>
-    <div class="hero with-overlay bg-image with-icon framed" style="background-image: url('<?php the_field('cover_image'); ?>')">
-        <h1 class="white">Our History</h1>
-        <label><?php the_field('scroll_cta'); ?></label>
-        <a class="down-arrow" href="#anchorHistory" rel="relativeanchor"></a>
-    </div>
+    <?php if(get_field('caption_image_overlay') == 'Overlay' ): ?>
+        <div class="hero with-overlay bg-image with-icon framed" style="background-image: url('<?php the_field('cover_image'); ?>')">
+            <h1 class="white">Our History</h1>
+            <label><?php the_field('scroll_cta'); ?></label>
+            <a class="down-arrow" href="#anchorHistory" rel="relativeanchor"></a>
+        </div>
+    <?php elseif(get_field('caption_image_overlay') == 'No Overlay'): ?>
+        <div class="hero bg-image with-icon framed" style="background-image: url('<?php the_field('cover_image'); ?>')">
+            <h1 class="white">Our History</h1>
+            <label><?php the_field('scroll_cta'); ?></label>
+            <a class="down-arrow" href="#anchorHistory" rel="relativeanchor"></a>
+        </div>
+    <?php endif; ?>
+        
     <div id="anchorHistory"></div>
     <?php if(have_rows('content_blocks')):?>
         <?php while(have_rows('content_blocks')): the_row(); ?>
