@@ -23,7 +23,7 @@
 }
 
 .grid-item{
-    a {
+   > a {
         position: relative;
 
         &::before {
@@ -60,7 +60,7 @@
     }
 
     &.notable-works {        
-        a {
+       > a {
 
             &::before {
                 content: 'DETAILS';
@@ -95,7 +95,7 @@
 }
     
 
-    a {
+  >  a {
         display: block;
         height: 100%;
         width: 100%;
@@ -127,6 +127,10 @@
 
             @include MQ(XS) {
                 line-height: 30px;                   
+            }
+
+            &:hover {
+                color: $color-blue-light;
             }
         }
         
