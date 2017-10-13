@@ -9,13 +9,13 @@
 
 get_header(); ?>
 	<main>
-		<?php if(get_field('caption_image_overlay') == 'Overlay' ): ?>
+		<?php if(get_field('cover_image_overlay') == 'Overlay' ): ?>
 			<div class="hero with-overlay bg-image with-icon framed" style="background-image: url('<?php the_field('cover_image'); ?>')">
 				<h1 class="white">About Us</h1>
 				<label><?php the_field('scroll_cta'); ?></label>
 				<a class="down-arrow" href="#anchorAbout" rel="relativeanchor"></a>
 			</div>
-		<?php elseif(get_field('caption_image_overlay') == 'No Overlay'): ?>
+		<?php elseif(get_field('cover_image_overlay') == 'No Overlay'): ?>
 			<div class="hero bg-image with-icon framed" style="background-image: url('<?php the_field('cover_image'); ?>')">
 					<h1 class="white">About Us</h1>
 					<label><?php the_field('scroll_cta'); ?></label>

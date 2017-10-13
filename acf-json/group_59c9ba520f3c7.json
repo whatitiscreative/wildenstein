@@ -46,7 +46,7 @@
             "key": "field_59c9badfa8359",
             "label": "Cover Image Overlay",
             "name": "cover_image_overlay",
-            "type": "checkbox",
+            "type": "radio",
             "instructions": "Optionally add an overlay to add contrast between the title of the post and the image behind it.",
             "required": 0,
             "conditional_logic": 0,
@@ -59,11 +59,11 @@
                 "Overlay": "Overlay",
                 "No Overlay": "No Overlay"
             },
-            "allow_custom": 0,
-            "save_custom": 0,
-            "default_value": [],
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
             "layout": "vertical",
-            "toggle": 0,
             "return_format": "value"
         },
         {
@@ -207,5 +207,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1507163593
+    "modified": 1507923702
 }
